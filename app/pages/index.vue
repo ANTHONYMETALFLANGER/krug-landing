@@ -1,11 +1,17 @@
 <script setup lang="ts">
 definePageMeta({
-    layout: 'header-content-footer'
+  layout: "header-content-footer",
 })
 </script>
 
 <template>
-    <LandingColumn>
-        <Hero />
-    </LandingColumn>
+  <LandingColumn>
+    <Hero />
+    <ModelAFeatures />
+    <GuitarColorSection />
+    <BlogSection />
+    <GalerySection />
+    <ProjectStatusAndFeedback />
+    <ProjectSupport />
+  </LandingColumn>
 </template>

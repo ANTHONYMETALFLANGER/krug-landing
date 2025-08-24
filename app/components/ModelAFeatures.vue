@@ -1,0 +1,39 @@
+<script setup lang="ts">
+const features = computed(() => [
+  {
+    title: "Система горячей замены звукоснимателей",
+    text: "Уникальный механизм магнитного крепления звукоснимателя. Поддерживается большинство видов и брендов датчиков.",
+    imageUrl: undefined,
+  },
+  {
+    title: "Продуманная внутренняя компоновка",
+    text: "Быстрый и удобный доступ к темброблоку и прочей внутренней электронике. Возможность замены электроники без использования паяльника.",
+    imageUrl: undefined,
+  },
+  {
+    title: "Малый вес и отличная эргономика",
+    text: "Корпус изготовлен из специального полимера, что сильно снижает вес (до ~2кг). В отличии от дерева данный материал не ведет при перепадах температур и влажности. Идеально для поездок.",
+    imageUrl: undefined,
+  },
+])
+</script>
+
+<template>
+  <LandingSectionLayout title="Модель А" :trailing-link="{ href: '#', text: 'Подробнее' }">
+    <div class="grid grid-cols-1 grid-rows-1 sm:grid-rows-2 sm:grid-cols-2 lg:grid-rows-1 lg:grid-cols-3 gap-20 md:gap-5">
+      <div
+        v-for="(feature, index) in features"
+        :key="feature.title"
+        class="col-span-1 row-span-1" :class="[
+          index === features.length - 1 ? 'sm:col-span-2 lg:col-span-1' : '',
+        ]"
+      >
+        <LandingCard
+          :title="feature.title"
+          :text="feature.text"
+          :image-url="feature.imageUrl"
+        />
+      </div>
+    </div>
+  </LandingSectionLayout>
+</template>
