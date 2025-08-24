@@ -3,12 +3,41 @@
 
 @theme static {
     --font-sans: "IBM Plex Sans", sans-serif;
-  }
 
-@theme {
---ui-primary: black;
+    --animate-hero-main-text-appear: hero-main-text-appear 2s cubic-bezier(0.45,0.01,0.11,0.99);
+    @keyframes hero-main-text-appear {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    --animate-hero-selected-text-appear: hero-selected-text-appear 2.5s cubic-bezier(0.03,0.32,0.27,1.00);
+    @keyframes hero-selected-text-appear {
+        0%,
+        10% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
 }
 
-@theme dark {
---ui-primary: var(--color-amber-50);
+:root {
+  --ui-primary: black;
+  --ui-bg: var(--color-amber-50);
+  --ui-text: black;
+  --ui-secondary: #FF3C00;
+}
+
+.dark {
+  --ui-primary: var(--color-amber-50);
+  --ui-bg: black;
+  --ui-text: var(--color-amber-50);
+  --ui-secondary: #FF3C00;
 }
