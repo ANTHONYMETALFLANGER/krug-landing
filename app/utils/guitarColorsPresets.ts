@@ -81,11 +81,11 @@ export function guitarColorsPresets() {
       accent: guitarColorsPallettes.pastel.LightGreen,
     },
 
-    // Pastel primary inverted combinations
+    // More pastel combinations
     {
-      name: "LightGreen_LightSaturatedBlue",
+      name: "LightGreen_LightGreen",
       deck: guitarColorsPallettes.pastel.LightGreen,
-      accent: guitarColorsPallettes.primary.LightSaturatedBlue,
+      accent: guitarColorsPallettes.pastel.LightGreen,
     },
     {
       name: "LightPurple_Orange",
@@ -134,12 +134,7 @@ export function guitarColorsPresets() {
       accent: guitarColorsPallettes.primary.Black,
     },
 
-    // // White_Primary
-    {
-      name: "White_Purple",
-      deck: guitarColorsPallettes.primary.White,
-      accent: guitarColorsPallettes.primary.Purple,
-    },
+    // White_Primary
     {
       name: "White_DarkRed",
       deck: guitarColorsPallettes.primary.White,
