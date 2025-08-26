@@ -16,14 +16,16 @@
         }
     }
 
-    --animate-hero-selected-text-appear: hero-selected-text-appear 2.5s cubic-bezier(0.03,0.32,0.27,1.00);
+    --animate-hero-selected-text-appear: hero-selected-text-appear 2.3s cubic-bezier(0.45,0.01,0.11,0.99);
     @keyframes hero-selected-text-appear {
         0%,
         10% {
             opacity: 0;
+            transform: translateY(20px);
         }
         100% {
             opacity: 1;
+            transform: translateY(0);
         }
     }
 }
@@ -40,4 +42,73 @@
   --ui-bg: black;
   --ui-text: var(--color-amber-50);
   --ui-secondary: #FF3C00;
+}
+
+@layer base {  
+    .cover-noise::after {
+        content: '';
+        background: url(/assets/images/broken_noise.png);
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 400%;
+        height: 400%;
+        opacity: 0.8;
+        animation: noiseFX 2s steps(6) infinite;
+        filter: brightness(805%);
+        mix-blend-mode: multiply;
+        opacity: 0.3;
+        pointer-events: none;
+    }
+
+    .cover-noise-darker::after {
+        filter: brightness(705%);
+        mix-blend-mode: multiply;
+        opacity: 0.35;
+    }
+
+    .cover-noise-semi-darker::after {
+        filter: brightness(805%);
+        mix-blend-mode: multiply;
+        opacity: 0.3;
+    }
+
+    .cover-noise-semi-lighter::after {
+        filter: brightness(505%);
+        mix-blend-mode: hard-light;
+        opacity: 0.3;
+    }
+
+    .cover-noise-semi-semi-lighter::after {
+        filter: brightness(505%);
+        mix-blend-mode: hard-light;
+        opacity: 0.2;
+    }
+
+    .cover-noise-lighter::after {
+        mix-blend-mode: soft-light;
+        filter: brightness(505%);
+    }
+
+    @keyframes noiseFX {
+        0%,
+        100% {
+            transform: translate(0, 0);
+        }
+        10% {
+            transform: translate(-5%, -10%);
+        }
+        30% {
+            transform: translate(3%, -15%);
+        }
+        50% {
+            transform: translate(12%, 9%);
+        }
+        70% {
+            transform: translate(9%, 4%);
+        }
+        90% {
+            transform: translate(-1%, 7%);
+        }
+    }
 }

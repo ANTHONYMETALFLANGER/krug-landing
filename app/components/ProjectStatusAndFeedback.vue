@@ -47,6 +47,8 @@ async function onSubmit(event: FormSubmitEvent<typeof state>) {
   feedbackSuccessModalOpen.value = true
   console.log(event.data)
 }
+
+const colorMode = useColorMode()
 </script>
 
 <template>
@@ -70,56 +72,63 @@ async function onSubmit(event: FormSubmitEvent<typeof state>) {
     </template>
   </UModal>
 
-  <div class="bg-primary w-full px-[1.2rem] py-[3rem] md:px-[2rem] md:py-[4rem] lg:px-[5rem] flex flex-col gap-16 lg:flex-row md:gap-20 lg:justify-between text-inverted">
-    <div class="w-full lg:w-[37%] space-y-[1.5rem] md:space-y-[3rem] lg:space-y-[8rem]">
-      <div class="w-full space-y-[1.5rem] md:space-y-[0.5rem] lg:space-y-[2rem]">
-        <h2 class="text-2xl">
-          Статус проекта
-        </h2>
-        <h1 class="hidden md:block md:text-[3rem] xl:text-[4rem] text-purple-400 dark:text-purple-800">
-          В разработке
-        </h1>
-
-        <div class="md:hidden bg-purple-400 dark:bg-purple-800 rounded-full px-4 py-3">
-          <h2 class="text-base text-default">
-            В разработке
+  <div
+    class="relative bg-primary w-full px-[1.2rem] py-[3rem] md:px-[2rem] md:py-[4rem] lg:px-[5rem] overflow-hidden"
+  >
+    <div
+      class="w-full h-full flex flex-col gap-16 lg:flex-row md:gap-20 lg:justify-between text-inverted cover-noise"
+      :class="colorMode.value !== 'dark' ? 'cover-noise-semi-lighter' : 'cover-noise-semi-darker'"
+    >
+      <div class="w-full lg:w-[37%] space-y-[1.5rem] md:space-y-[3rem] lg:space-y-[8rem]">
+        <div class="w-full space-y-[1.5rem] md:space-y-[0.5rem] lg:space-y-[2rem]">
+          <h2 class="text-2xl">
+            Статус проекта
           </h2>
+          <h1 class="hidden md:block md:text-[3rem] xl:text-[4rem] text-purple-400 dark:text-purple-800">
+            В разработке
+          </h1>
+
+          <div class="md:hidden bg-purple-400 dark:bg-purple-800 rounded-full px-4 py-3">
+            <h2 class="text-base text-default">
+              В разработке
+            </h2>
+          </div>
         </div>
-      </div>
 
-      <p class="w-full text-sm md:text-base md:w-[80%] lg:w-full">
-        Проект находится в стадии разработки и пока не готов к полноценному выходу на рынок. Вы можете связаться с нами и оставить свои пожелания.
-      </p>
-    </div>
-
-    <div class="w-full lg:w-[37%] space-y-[3rem]">
-      <div class="space-y-[1rem]">
-        <h2 class="text-2xl">
-          Обратная связь
-        </h2>
-        <p class="text-sm md:text-base w-full md:w-[80%] lg:w-full">
-          Свяжитесь с нами если хотите уточнить что либо, касательно наших продуктов. Мы постараемся ответить как можно скорее
+        <p class="w-full text-sm md:text-base md:w-[80%] lg:w-full">
+          Проект находится в стадии разработки и пока не готов к полноценному выходу на рынок. Вы можете связаться с нами и оставить свои пожелания.
         </p>
       </div>
 
-      <!-- Feedback form -->
-      <UForm :validate="validate" :state="state" class="flex flex-col gap-3" @submit="onSubmit">
-        <UFormField :ui="{ label: ['text-inverted text-base font-normal'] }" name="email">
-          <UInput v-model="state.email" class="w-full" placeholder="Ваш email" :ui="{ base: 'min-h-13 rounded-none' }" />
-        </UFormField>
+      <div class="w-full lg:w-[37%] space-y-[3rem]">
+        <div class="space-y-[1rem]">
+          <h2 class="text-2xl">
+            Обратная связь
+          </h2>
+          <p class="text-sm md:text-base w-full md:w-[80%] lg:w-full">
+            Свяжитесь с нами если хотите уточнить что либо, касательно наших продуктов. Мы постараемся ответить как можно скорее
+          </p>
+        </div>
 
-        <UFormField :ui="{ label: ['text-inverted text-base font-normal'] }" name="message">
-          <UTextarea v-model="state.message" class="w-full" placeholder="Сообщение" :ui="{ base: 'min-h-32 rounded-none' }" />
-        </UFormField>
+        <!-- Feedback form -->
+        <UForm :validate="validate" :state="state" class="flex flex-col gap-3" @submit="onSubmit">
+          <UFormField :ui="{ label: ['text-inverted text-base font-normal'] }" name="email">
+            <UInput v-model="state.email" class="w-full" placeholder="Ваш email" :ui="{ base: 'min-h-13 rounded-none' }" />
+          </UFormField>
 
-        <UButton
-          class="h-[3.6rem] w-fit px-6 mt-3 text-inverted rounded-full bg-transparent border border-bg hover:border-3 hover:bg-transparent transition-all duration-100"
-          type="submit"
-          trailing-icon="material-symbols:send-outline"
-        >
-          Отправить
-        </UButton>
-      </UForm>
+          <UFormField :ui="{ label: ['text-inverted text-base font-normal'] }" name="message">
+            <UTextarea v-model="state.message" class="w-full" placeholder="Сообщение" :ui="{ base: 'min-h-32 rounded-none' }" />
+          </UFormField>
+
+          <UButton
+            class="h-[3.6rem] w-fit px-6 mt-3 text-inverted rounded-full bg-transparent border border-bg hover:border-3 hover:bg-transparent transition-all duration-100"
+            type="submit"
+            trailing-icon="material-symbols:send-outline"
+          >
+            Отправить
+          </UButton>
+        </UForm>
+      </div>
     </div>
   </div>
 </template>

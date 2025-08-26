@@ -27,10 +27,10 @@ const menuEntries = computed(() => [
     class="w-full h-[7.2rem] md:h-[6.2rem] transition-all flex items-center justify-between gap-[8rem] bg-default"
     :class="{ 'h-[6.2rem]! px-[1rem]': y > scrollBreakpoint }"
   >
-    <Logo class="w-full min-w-[3.6rem] max-w-[3.6rem] aspect-square fill-primary" />
+    <Logo class="w-full min-w-[3.4rem] max-w-[3.4rem] aspect-square fill-primary" />
 
     <!-- Navigation in header -->
-    <div class="flex md:gap-[1.16rem] lg:gap-0 items-center lg:w-full lg:max-w-[64rem]">
+    <div class="flex md:gap-[1.16rem] lg:gap-0 items-center lg:w-full lg:max-w-[74.8rem]">
       <nav class="hidden lg:grid grid-cols-4 w-full">
         <template v-for="entry in menuEntries" :key="entry.title">
           <a class="hover:text-secondary transition-colors duration-200" :href="entry.href">{{ entry.title }}</a>
