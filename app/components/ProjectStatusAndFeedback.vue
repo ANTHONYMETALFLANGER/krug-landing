@@ -77,7 +77,7 @@ const colorMode = useColorMode()
   >
     <div
       class="w-full h-full flex flex-col gap-16 lg:flex-row md:gap-20 lg:justify-between text-inverted cover-noise"
-      :class="colorMode.value !== 'dark' ? 'cover-noise-semi-lighter' : 'cover-noise-semi-darker'"
+      :class="colorMode.value !== 'dark' ? 'cover-noise-project-status-on-dark' : 'cover-noise-semi-darker'"
     >
       <div class="w-full lg:w-[37%] space-y-[1.5rem] md:space-y-[3rem] lg:space-y-[8rem]">
         <div class="w-full space-y-[1.5rem] md:space-y-[0.5rem] lg:space-y-[2rem]">
@@ -121,7 +121,7 @@ const colorMode = useColorMode()
           </UFormField>
 
           <UButton
-            class="h-[3.6rem] w-fit px-6 mt-3 text-inverted rounded-full bg-transparent border border-bg hover:border-3 hover:bg-transparent transition-all duration-100"
+            class="h-[3.6rem] w-fit px-6 mt-3 text-inverted rounded-full bg-transparent border border-bg hover:outline-2 hover:bg-transparent transition-all duration-100"
             type="submit"
             trailing-icon="material-symbols:send-outline"
           >
@@ -132,3 +132,11 @@ const colorMode = useColorMode()
     </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.cover-noise-project-status-on-dark::after {
+  filter: brightness(505%);
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+}
+</style>

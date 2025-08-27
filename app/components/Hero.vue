@@ -19,7 +19,7 @@
                   </h1>
                 </div>
 
-                <p class="font-bold">
+                <p>
                   Инструмент для тех, кто не боится <span class="inline-block leading-[0.8rem] p-1 bg-secondary text-inverted">выделиться</span>
                 </p>
               </div>
@@ -37,7 +37,7 @@
         </div>
         <div class="bg-primary/20 w-[56%] h-full">
           <HeroProductVideoContainer
-            class="brightness-125"
+            class="contrast-[85%] brightness-125"
             video-url="hero-product-showcase/1-large.mp4"
             poster-url="hero-product-showcase/1-large.jpg"
             :video-aspect-ratio="0.6"
@@ -83,7 +83,9 @@
                   </h1>
                 </div>
 
-                <p>Инструмент для тех, кто не боится <span class="inline-block leading-[0.8rem] p-1 bg-secondary text-inverted">выделиться</span></p>
+                <p>
+                  Инструмент для тех, кто не боится <span class="inline-block leading-[0.8rem] p-1 bg-secondary text-inverted">выделиться</span>
+                </p>
               </div>
             </div>
             <div class="w-full h-full max-h-[20rem] flex gap-5">
@@ -147,7 +149,7 @@
                   </h1>
                 </div>
 
-                <p class="text-sm">
+                <p>
                   Инструмент для тех, кто не боится <span class="inline-block leading-[0.6rem] p-1 bg-secondary text-inverted">выделиться</span>
                 </p>
               </div>

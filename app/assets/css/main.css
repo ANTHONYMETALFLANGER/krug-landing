@@ -39,7 +39,7 @@
 
 .dark {
   --ui-primary: var(--color-amber-50);
-  --ui-bg: black;
+  --ui-bg: #0F0F0F;
   --ui-text: var(--color-amber-50);
   --ui-secondary: #FF3C00;
 }
@@ -54,7 +54,7 @@
         width: 400%;
         height: 400%;
         opacity: 0.8;
-        animation: noiseFX 2s steps(6) infinite;
+        animation: noiseFX 2s steps(4) infinite;
         filter: brightness(805%);
         mix-blend-mode: multiply;
         opacity: 0.3;
@@ -80,9 +80,9 @@
     }
 
     .cover-noise-semi-semi-lighter::after {
-        filter: brightness(505%);
+        filter: brightness(605%);
         mix-blend-mode: hard-light;
-        opacity: 0.2;
+        opacity: 0.1;
     }
 
     .cover-noise-lighter::after {

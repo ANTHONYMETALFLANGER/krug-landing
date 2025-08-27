@@ -44,7 +44,7 @@ const bgTransparency = computed(() => colorMode.value === "dark" ? "30%" : "10%"
             Ваш стиль → ваш цвет
           </h2>
 
-          <UButton class="hidden md:flex items-center h-full px-6 text-primary rounded-full bg-transparent border border-primary hover:border-3 hover:bg-transparent transition-all duration-100" trailing-icon="material-symbols:arrow-outward">
+          <UButton class="hidden md:flex items-center h-full px-6 text-primary rounded-full bg-transparent border border-primary hover:outline-2 hover:bg-transparent transition-all duration-100" trailing-icon="material-symbols:arrow-outward">
             В конфигуратор
           </UButton>
         </div>
@@ -70,7 +70,7 @@ const bgTransparency = computed(() => colorMode.value === "dark" ? "30%" : "10%"
     </div>
 
     <div class="w-full px-10 pb-10 flex justify-between items-center md:hidden">
-      <UButton class="h-[3.6rem] w-full px-6 text-primary rounded-full bg-transparent border border-primary hover:border-3 hover:bg-transparent transition-all duration-100" trailing-icon="material-symbols:arrow-outward">
+      <UButton class="h-[3.6rem] w-full px-6 text-primary rounded-full bg-transparent border border-primary hover:outline-2 hover:bg-transparent transition-all duration-100" trailing-icon="material-symbols:arrow-outward">
         <p class="mx-auto">
           В конфигуратор
         </p>

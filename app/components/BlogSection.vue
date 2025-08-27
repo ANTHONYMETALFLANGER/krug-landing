@@ -38,7 +38,7 @@ const actualElements = computed(() => blogs.value.slice(0, visibleBlogsCount.val
 </script>
 
 <template>
-  <LandingSectionLayout title="Блог" :trailing-link="{ href: '#', text: 'Больше новостей' }">
+  <LandingSectionLayout title="Блог" :trailing-link="{ href: '#', text: 'Больше новостей', disabled: true }">
     <div
       class="grid grid-cols-1 grid-rows-1 md:grid-rows-1 md:grid-cols-2 lg:grid-rows-1 lg:grid-cols-3 gap-20 md:gap-5"
     >

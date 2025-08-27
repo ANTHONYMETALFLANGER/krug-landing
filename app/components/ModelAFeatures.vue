@@ -19,7 +19,7 @@ const features = computed(() => [
 </script>
 
 <template>
-  <LandingSectionLayout title="Модель А" :trailing-link="{ href: '#', text: 'Подробнее' }">
+  <LandingSectionLayout title="Модель А" :trailing-link="{ href: '/modelA-features', text: 'Подробнее' }">
     <div class="grid grid-cols-1 grid-rows-1 sm:grid-rows-2 sm:grid-cols-2 lg:grid-rows-1 lg:grid-cols-3 gap-20 md:gap-5">
       <div
         v-for="(feature, index) in features"
@@ -35,5 +35,9 @@ const features = computed(() => [
         />
       </div>
     </div>
+
+    <template #title-trailing>
+      <Icon name="material-symbols:fiber-new" class="text-secondary size-7" />
+    </template>
   </LandingSectionLayout>
 </template>

@@ -15,10 +15,10 @@ watch(y, (prev, next) => {
 })
 
 const menuEntries = computed(() => [
-  { title: "Модель А", href: "#" },
-  { title: "Звукосниматели", href: "#" },
-  { title: "Кастомизация", href: "#" },
-  { title: "О компании", href: "#" },
+  { title: "Модель А", href: "/modelA-features" },
+  { title: "Звукосниматели", href: "#", comingSoon: true },
+  { title: "Кастомизация", href: "/customization" },
+  { title: "О компании", href: "/about-company" },
 ])
 </script>
 
@@ -27,13 +27,30 @@ const menuEntries = computed(() => [
     class="w-full h-[7.2rem] md:h-[6.2rem] transition-all flex items-center justify-between gap-[8rem] bg-default"
     :class="{ 'h-[6.2rem]! px-[1rem]': y > scrollBreakpoint }"
   >
-    <Logo class="w-full min-w-[3.4rem] max-w-[3.4rem] aspect-square fill-primary" />
+    <a href="/">
+      <Logo class="w-full min-w-[3.4rem] max-w-[3.4rem] aspect-square fill-primary" />
+    </a>
 
     <!-- Navigation in header -->
     <div class="flex md:gap-[1.16rem] lg:gap-0 items-center lg:w-full lg:max-w-[74.8rem]">
       <nav class="hidden lg:grid grid-cols-4 w-full">
         <template v-for="entry in menuEntries" :key="entry.title">
-          <a class="hover:text-secondary transition-colors duration-200" :href="entry.href">{{ entry.title }}</a>
+          <a v-if="!entry.comingSoon" class="hover:text-secondary transition-colors duration-200" :href="entry.href">{{ entry.title }}</a>
+          <UTooltip
+            v-else :content="{
+              align: 'start',
+              side: 'bottom',
+              sideOffset: 8,
+            }"
+            :ui="{
+              content: 'p-4',
+              text: 'text-base',
+            }"
+            class="text-default!"
+            text="Раздел в разработке..."
+          >
+            <a class="opacity-45 cursor-not-allowed" :disabled="true">{{ entry.title }}</a>
+          </UTooltip>
         </template>
       </nav>
 

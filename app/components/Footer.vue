@@ -17,7 +17,7 @@ function scrollToTop() {
     </div>
 
     <UButton
-      class="h-[3.6rem] w-full md:w-fit px-6 mt-3 text-default rounded-full bg-transparent border hover:border-3 hover:bg-transparent transition-all duration-100"
+      class="h-[3.6rem] w-full md:w-fit px-6 mt-3 text-default rounded-full bg-transparent border hover:outline-2 hover:bg-transparent transition-all duration-100"
       type="submit"
       trailing-icon="material-symbols:arrow-upward"
       @click="scrollToTop"

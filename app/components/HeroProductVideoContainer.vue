@@ -44,18 +44,19 @@ onMounted(() => {
 const { y } = useWindowScroll()
 const fadeImagesOnScrollPercent = computed(() => {
   // convert scroll value to value between 0 and 1
+  if (!window)
+    return 0
   return y.value / window.innerHeight
 })
 </script>
 
 <template>
   <div class="w-full h-full overflow-hidden">
-    <div ref="containerRef" class="relative w-full h-full overflow-hidden cover-noise hover:scale-105 transition-all duration-300" :class="appearence === 'darker' ? 'cover-noise-darker' : 'cover-noise-semi-semi-lighter'">
+    <div ref="containerRef" class="relative w-full h-full overflow-hidden cover-noise transition-all duration-300" :class="appearence === 'darker' ? 'cover-noise-darker' : 'cover-noise-semi-semi-lighter'">
       <div class="absolute fade-on-scroll w-full h-full top-0 left-0 z-30" />
 
       <!-- Video plays only once -->
       <video
-        v-if="!hideVideo"
         ref="videoRef"
         :src="videoUrl"
         autoplay
@@ -68,7 +69,7 @@ const fadeImagesOnScrollPercent = computed(() => {
       />
 
       <!-- Poster (last frame static after video played) -->
-      <NuxtImg
+      <!-- <NuxtImg
         :src="posterUrl"
         alt="last frame"
         class="absolute"
@@ -78,7 +79,7 @@ const fadeImagesOnScrollPercent = computed(() => {
           'w-full h-auto top-1/2 left-0 -translate-y-1/2': sizeBy === 'width',
           'min-w-max h-full top-0 left-1/2 -translate-x-1/2': sizeBy === 'height',
         }"
-      />
+      /> -->
     </div>
   </div>
 </template>
