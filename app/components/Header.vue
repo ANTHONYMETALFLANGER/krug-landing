@@ -70,7 +70,22 @@ const menuEntries = computed(() => [
           <div class="flex flex-col gap-5 items-center w-full max-w-[64rem] p-6">
             <nav class="flex flex-col gap-5 w-full">
               <template v-for="entry in menuEntries" :key="entry.title">
-                <a class="hover:text-secondary transition-colors duration-200" :href="entry.href">{{ entry.title }}</a>
+                <a v-if="!entry.comingSoon" class="hover:text-secondary transition-colors duration-200" :href="entry.href">{{ entry.title }}</a>
+                <UTooltip
+                  v-else :content="{
+                    align: 'start',
+                    side: 'bottom',
+                    sideOffset: 8,
+                  }"
+                  :ui="{
+                    content: 'p-4',
+                    text: 'text-base',
+                  }"
+                  class="text-default!"
+                  text="Раздел в разработке..."
+                >
+                  <a class="opacity-45 cursor-not-allowed" :disabled="true">{{ entry.title }}</a>
+                </UTooltip>
               </template>
             </nav>
           </div>
@@ -87,7 +102,22 @@ const menuEntries = computed(() => [
           <div class="flex flex-col gap-5 items-start w-full max-w-[64rem] p-6">
             <nav class="flex flex-col gap-5 w-full">
               <template v-for="entry in menuEntries" :key="entry.title">
-                <a class="hover:text-secondary transition-colors duration-200" :href="entry.href">{{ entry.title }}</a>
+                <a v-if="!entry.comingSoon" class="hover:text-secondary transition-colors duration-200" :href="entry.href">{{ entry.title }}</a>
+                <UTooltip
+                  v-else :content="{
+                    align: 'start',
+                    side: 'bottom',
+                    sideOffset: 8,
+                  }"
+                  :ui="{
+                    content: 'p-4',
+                    text: 'text-base',
+                  }"
+                  class="text-default!"
+                  text="Раздел в разработке..."
+                >
+                  <a class="opacity-45 cursor-not-allowed" :disabled="true">{{ entry.title }}</a>
+                </UTooltip>
               </template>
             </nav>
             <USeparator class="w-full" />

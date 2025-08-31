@@ -37,7 +37,7 @@
         </div>
         <div class="bg-primary/10 w-[56%] h-full">
           <HeroProductVideoContainer
-            class="contrast-[85%] brightness-125"
+            class="contrast-[95%]"
             video-url="hero-product-showcase/1-large.mp4"
             poster-url="hero-product-showcase/1-large.jpg"
             :video-aspect-ratio="0.6"
@@ -49,7 +49,7 @@
       <div class="w-full h-full max-h-[14rem] flex gap-5">
         <div class="bg-primary/10 h-full w-full">
           <HeroProductVideoContainer
-            class="brightness-125 contrast-[85%]"
+            class="brightness-110 contrast-[95%]"
             video-url="hero-product-showcase/3-large.mp4"
             poster-url="hero-product-showcase/3-large.jpg"
             :video-aspect-ratio="4.64"
@@ -100,7 +100,7 @@
               </div>
               <div class="bg-primary/10 w-[50%] h-full">
                 <HeroProductVideoContainer
-                  class="brightness-125"
+                  class="brightness-125 contrast-[95%]"
                   video-url="hero-product-showcase/1-small.mp4"
                   poster-url="hero-product-showcase/1-small.jpg"
                   :video-aspect-ratio="0.84"
@@ -115,7 +115,7 @@
       <div class="w-full h-[16rem] flex gap-5">
         <div class="bg-primary/10 h-full w-full">
           <HeroProductVideoContainer
-            class="brightness-125 contrast-[85%]"
+            class="brightness-110 contrast-[95%]"
             video-url="hero-product-showcase/3-large.mp4"
             poster-url="hero-product-showcase/3-large.jpg"
             :video-aspect-ratio="4.64"
