@@ -31,8 +31,8 @@ const membersList = [
   <div>
     <PageTitleSection title="О компании" />
 
-    <div class="space-y-16 lg:space-y-20">
-      <p class="max-w-[60rem]">
+    <div class="mt-8 md:mt-0 space-y-16 lg:space-y-20">
+      <p class="max-w-[50rem]">
         Наша компания была основана в 2025 году и специализируется на разработке, продаже современных звуковых устройств.
       </p>
 
