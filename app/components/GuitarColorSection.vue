@@ -14,25 +14,14 @@ const bgColorHex = computed<string>(() => {
 
 const currentGuitarImagePath = computed(() => `guitar_color_schemes/${currentPreset.value?.name}.webp`)
 
-const imageBlurClass = ref<string>("blur-2xl")
-watch(currentPresetName, () => {
-  imageBlurClass.value = "blur-2xl"
-  setTimeout(() => {
-    imageBlurClass.value = "blur-0"
-  }, 300)
-})
-
 onMounted(() => {
   presets.value.sort(() => Math.random() - 0.5)
-
-  // Make shure that image is not blurred
-  setTimeout(() => {
-    imageBlurClass.value = "blur-0"
-  }, 300)
 })
 
 const colorMode = useColorMode()
 const bgTransparency = computed(() => colorMode.value === "dark" ? "30%" : "10%")
+
+const isPresetImageLoaded = ref(false)
 </script>
 
 <template>
@@ -50,8 +39,18 @@ const bgTransparency = computed(() => colorMode.value === "dark" ? "30%" : "10%"
         </div>
 
         <div class="relative w-full h-[20rem] md:h-[30rem] brightness-125 dark:brightness-100 lg:h-full flex items-center justify-center">
-          <NuxtImg :class="imageBlurClass" class="hidden transition-all duration-300 md:block absolute left-[3%] top-1/2 translate-y-[-35%] md:-translate-y-1/2 h-[16rem] md:h-[18rem] xl:h-[22rem] object-cover object-left" :src="currentGuitarImagePath" :alt="currentPreset.name" />
-          <NuxtImg :class="imageBlurClass" class="block transition-all duration-300 md:hidden absolute left-1/2 -translate-x-1/2 top-[3.5rem] rotate-270 h-[16rem] min-w-[22rem] w-[22rem] object-cover object-left" :src="currentGuitarImagePath" :alt="currentPreset.name" />
+          <NuxtImg
+            :class="isPresetImageLoaded ? 'blur-0 saturate-100 opacity-100' : 'blur-2xl saturate-0 opacity-40'"
+            class="hidden transition-all duration-300 md:block absolute left-[3%] top-1/2 translate-y-[-35%] md:-translate-y-1/2 h-[16rem] md:h-[18rem] xl:h-[22rem] object-cover object-left"
+            :src="currentGuitarImagePath" :alt="currentPreset.name"
+            @load="isPresetImageLoaded = true"
+          />
+          <NuxtImg
+            :class="isPresetImageLoaded ? 'blur-0 saturate-100 opacity-100' : 'blur-2xl saturate-0 opacity-40'"
+            class="block transition-all duration-300 md:hidden absolute left-1/2 -translate-x-1/2 top-[3.5rem] rotate-270 h-[16rem] min-w-[22rem] w-[22rem] object-cover object-left"
+            :src="currentGuitarImagePath" :alt="currentPreset.name"
+            @load="isPresetImageLoaded = true"
+          />
         </div>
       </div>
     </div>
@@ -64,7 +63,10 @@ const bgTransparency = computed(() => colorMode.value === "dark" ? "30%" : "10%"
           :color2="preset.accent"
           class="size-[3.2rem] md:size-[5.2rem] transition-all duration-100"
           :class="currentPresetName === preset.name ? 'outline-3 outline-primary' : ''"
-          @click="currentPresetName = preset.name"
+          @click="() => {
+            currentPresetName = preset.name
+            isPresetImageLoaded = false
+          }"
         />
       </div>
     </div>

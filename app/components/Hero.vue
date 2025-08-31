@@ -24,7 +24,7 @@
                 </p>
               </div>
             </div>
-            <div class="bg-primary/20 w-full h-full max-h-[20rem]">
+            <div class="bg-primary/10 w-full h-full max-h-[20rem]">
               <HeroProductVideoContainer
                 video-url="hero-product-showcase/2-large.mp4"
                 poster-url="hero-product-showcase/2-large.jpg"
@@ -35,7 +35,7 @@
             </div>
           </div>
         </div>
-        <div class="bg-primary/20 w-[56%] h-full">
+        <div class="bg-primary/10 w-[56%] h-full">
           <HeroProductVideoContainer
             class="contrast-[85%] brightness-125"
             video-url="hero-product-showcase/1-large.mp4"
@@ -47,7 +47,7 @@
       </div>
 
       <div class="w-full h-full max-h-[14rem] flex gap-5">
-        <div class="bg-primary/20 h-full w-full">
+        <div class="bg-primary/10 h-full w-full">
           <HeroProductVideoContainer
             class="brightness-125 contrast-[85%]"
             video-url="hero-product-showcase/3-large.mp4"
@@ -56,7 +56,7 @@
             default-size-by="width"
           />
         </div>
-        <div class="bg-primary/20 h-full aspect-square">
+        <div class="bg-primary/10 h-full aspect-square">
           <HeroProductVideoContainer
             video-url="hero-product-showcase/4-small.mp4"
             poster-url="hero-product-showcase/4-small.jpg"
@@ -89,7 +89,7 @@
               </div>
             </div>
             <div class="w-full h-full max-h-[20rem] flex gap-5">
-              <div class="bg-primary/20 w-full h-full">
+              <div class="bg-primary/10 w-full h-full">
                 <HeroProductVideoContainer
                   video-url="hero-product-showcase/2-large.mp4"
                   poster-url="hero-product-showcase/2-large.jpg"
@@ -98,7 +98,7 @@
                   appearence="darker"
                 />
               </div>
-              <div class="bg-primary/20 w-[50%] h-full">
+              <div class="bg-primary/10 w-[50%] h-full">
                 <HeroProductVideoContainer
                   class="brightness-125"
                   video-url="hero-product-showcase/1-small.mp4"
@@ -113,7 +113,7 @@
       </div>
 
       <div class="w-full h-[16rem] flex gap-5">
-        <div class="bg-primary/20 h-full w-full">
+        <div class="bg-primary/10 h-full w-full">
           <HeroProductVideoContainer
             class="brightness-125 contrast-[85%]"
             video-url="hero-product-showcase/3-large.mp4"
@@ -122,7 +122,7 @@
             default-size-by="width"
           />
         </div>
-        <div class="hidden lg:block bg-primary/20 h-full aspect-square">
+        <div class="hidden lg:block bg-primary/10 h-full aspect-square">
           <HeroProductVideoContainer
             video-url="hero-product-showcase/4-small.mp4"
             poster-url="hero-product-showcase/4-small.jpg"
@@ -155,7 +155,7 @@
               </div>
             </div>
             <div class="w-full h-full max-h-[11rem] flex gap-5">
-              <div class="bg-primary/20 w-full h-full">
+              <div class="bg-primary/10 w-full h-full">
                 <HeroProductVideoContainer
                   video-url="hero-product-showcase/2-small.mp4"
                   poster-url="hero-product-showcase/2-small.jpg"
@@ -164,7 +164,7 @@
                   appearence="darker"
                 />
               </div>
-              <div class="bg-primary/20 w-[56%] h-full">
+              <div class="bg-primary/10 w-[56%] h-full">
                 <HeroProductVideoContainer
                   video-url="hero-product-showcase/4-small.mp4"
                   poster-url="hero-product-showcase/4-small.jpg"
@@ -178,7 +178,7 @@
       </div>
 
       <div class="w-full h-full max-h-[8.2rem] flex gap-5">
-        <div class="bg-primary/20 h-full w-full">
+        <div class="bg-primary/10 h-full w-full">
           <HeroProductVideoContainer
             video-url="hero-product-showcase/3-small.mp4"
             poster-url="hero-product-showcase/3-small.jpg"
