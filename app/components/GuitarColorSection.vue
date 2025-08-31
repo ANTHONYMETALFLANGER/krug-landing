@@ -73,7 +73,7 @@ const isPresetImageLoaded = ref(false)
     </div>
 
     <div class="w-full px-10 pb-10 flex justify-between items-center md:hidden">
-      <UButton class="h-[3.6rem] w-full px-6 text-primary rounded-full bg-transparent border border-primary hover:outline-2 hover:bg-transparent transition-all duration-100" trailing-icon="material-symbols:arrow-outward">
+      <UButton href="/configurator" class="h-[3.6rem] w-full px-6 text-primary rounded-full bg-transparent border border-primary hover:outline-2 hover:bg-transparent transition-all duration-100" trailing-icon="material-symbols:arrow-outward">
         <p class="mx-auto">
           В конфигуратор
         </p>

@@ -37,14 +37,35 @@ function validate(state: any): FormError[] {
   return errors
 }
 
-const feedbackSuccessModalOpen = ref(false)
+const notifySuccessModalOpen = ref(false)
 async function onSubmit(event: FormSubmitEvent<typeof state>) {
-  feedbackSuccessModalOpen.value = true
+  notifySuccessModalOpen.value = true
   console.log(event.data)
 }
 </script>
 
 <template>
+  <UModal v-model:open="notifySuccessModalOpen" variant="subtle">
+    <template #content>
+      <div class="flex flex-col gap-5 items-end p-8">
+        <div class="flex gap-[1rem] items-center w-full">
+          <Icon name="material-symbols:check-circle-outline" class="text-[3rem]" />
+          <h2 class="w-full text-2xl">
+            Спасибо!
+          </h2>
+        </div>
+
+        <p class="w-full">
+          Мы уведомим вас как только конфигуратор будет доступен
+        </p>
+        <UButton variant="solid" class="w-fit px-5 py-3 rounded-full" @click="notifySuccessModalOpen = false">
+          Ок
+        </UButton>
+      </div>
+    </template>
+  </UModal>
+
+  <!-- eslint-disable-next-line vue/no-multiple-template-root -->
   <div class="space-y-10">
     <PageTitleSection title="Конфигуратор" />
 
@@ -58,7 +79,7 @@ async function onSubmit(event: FormSubmitEvent<typeof state>) {
           Он появится здесь когда мы начнем продажи. Подпишитесь на рассылку, чтобы быть в курсе.
         </p>
 
-        <UForm :validate="validate" :validate-on="['input']" :state="state" class="max-w-[30rem] w-full flex flex-col items-center gap-3 mt-[5rem]" @submit="onSubmit">
+        <UForm :validate="validate" :validate-on="['input']" :state="state" class="max-w-[30rem] w-full flex flex-col items-center gap-3 md:mt-[5rem]" @submit="onSubmit">
           <UFormField :ui="{ label: ['text-inverted text-base font-normal'] }" name="email" class="w-full">
             <UInput v-model="state.email" class="w-full" placeholder="Ваш email" :ui="{ base: 'min-h-13 rounded-none' }" />
           </UFormField>
