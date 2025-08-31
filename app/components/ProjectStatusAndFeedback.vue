@@ -81,10 +81,10 @@ const colorMode = useColorMode()
     >
       <div class="w-full lg:w-[37%] space-y-[1.5rem] md:space-y-[3rem] lg:space-y-[8rem]">
         <div class="w-full space-y-[1.5rem] md:space-y-[0.5rem] lg:space-y-[2rem]">
-          <h2 class="text-2xl">
+          <h2 class="text-2xl font-serif">
             Статус проекта
           </h2>
-          <h1 class="hidden md:block md:text-[3rem] xl:text-[4rem] text-purple-400 dark:text-purple-800">
+          <h1 class="hidden md:block md:text-[3rem] xl:text-[4rem] text-purple-400 dark:text-purple-800 font-serif">
             В разработке
           </h1>
 
@@ -102,7 +102,7 @@ const colorMode = useColorMode()
 
       <div class="w-full lg:w-[37%] space-y-[3rem]">
         <div class="space-y-[1rem]">
-          <h2 class="text-2xl">
+          <h2 class="text-2xl font-serif">
             Обратная связь
           </h2>
           <p class="text-sm md:text-base w-full md:w-[80%] lg:w-full">

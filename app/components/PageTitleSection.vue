@@ -10,7 +10,7 @@ defineProps<{
       <UButton title="На главную" icon="material-symbols:arrow-back" variant="link" class="pl-0" href="/">
         На главную
       </UButton>
-      <h1 class="animate-hero-main-text-appear">
+      <h1 class="animate-hero-main-text-appear font-serif">
         {{ title }}
       </h1>
     </div>

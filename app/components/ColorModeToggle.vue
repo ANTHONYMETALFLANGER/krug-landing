@@ -10,8 +10,8 @@ const isDark = computed(() => colorMode.preference === "dark")
 
 <template>
   <ClientOnly>
-    <UButton class="size-[3.6rem] rounded-full" @click="toggleTheme">
-      <Icon class="size-[70%] mt-[10%] m-auto" :name="isDark ? 'material-symbols:light-mode-outline' : 'material-symbols:dark-mode-outline'" />
+    <UButton class="size-[3.6rem] aspect-square! p-0 md:pt-1 rounded-full flex items-center justify-center" @click="toggleTheme">
+      <Icon class="w-[40%] aspect-square! h-auto" :name="isDark ? 'material-symbols:light-mode-outline' : 'material-symbols:dark-mode-outline'" />
     </UButton>
   </ClientOnly>
 </template>

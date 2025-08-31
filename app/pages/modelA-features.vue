@@ -32,7 +32,7 @@ const features = [
     <PageTitleSection title="Модель А" />
     <NuxtImg src="model-a/general.jpg" alt="title" class="w-full h-[20rem] md:h-[20rem] lg:h-[30rem] object-cover" />
 
-    <h2 class="text-2xl">
+    <h2 class="text-2xl font-serif">
       Об инструменте
     </h2>
 

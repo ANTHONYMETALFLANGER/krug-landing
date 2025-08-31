@@ -12,7 +12,7 @@
             <div class="h-full w-full">
               <div class="w-full h-full flex flex-col items-start justify-center">
                 <div class="my-auto text-[5.5rem] leading-[7.2rem] translate-y-[-10%]">
-                  <h1 class="animate-hero-main-text-appear">
+                  <h1 class="animate-hero-main-text-appear font-serif">
                     Новые формы,<br> новый звук,<br><span
                       class="inline-block bg-black text-amber-50 dark:bg-amber-50 dark:text-black leading-none animate-hero-selected-text-appear! text-nowrap"
                     >новый стиль.</span><span class="leading-[9.5rem]">‎ </span>

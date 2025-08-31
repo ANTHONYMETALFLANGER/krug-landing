@@ -29,11 +29,11 @@ const isPresetImageLoaded = ref(false)
     <div class="w-full p-10 md:pb-0 lg:py-10 lg:pl-10 lg:pr-0 cover-noise" :class="colorMode.value === 'dark' ? 'cover-noise-semi-semi-lighter' : 'cover-noise-semi-darker'">
       <div class="w-full h-full flex flex-col">
         <div class="w-full h-[3.6rem] flex justify-between items-center">
-          <h2 class="text-2xl">
+          <h2 class="text-2xl font-serif">
             Ваш стиль → ваш цвет
           </h2>
 
-          <UButton class="hidden md:flex items-center h-full px-6 text-primary rounded-full bg-transparent border border-primary hover:outline-2 hover:bg-transparent transition-all duration-100" trailing-icon="material-symbols:arrow-outward">
+          <UButton href="/configurator" class="hidden md:flex items-center h-full px-6 text-primary rounded-full bg-transparent border border-primary hover:outline-2 hover:bg-transparent transition-all duration-100" trailing-icon="material-symbols:arrow-outward">
             В конфигуратор
           </UButton>
         </div>
@@ -64,6 +64,7 @@ const isPresetImageLoaded = ref(false)
           class="size-[3.2rem] md:size-[5.2rem] transition-all duration-100"
           :class="currentPresetName === preset.name ? 'outline-3 outline-primary' : ''"
           @click="() => {
+            if (currentPresetName === preset.name) return
             currentPresetName = preset.name
             isPresetImageLoaded = false
           }"
