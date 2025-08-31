@@ -2,7 +2,7 @@
 // Мне надо менять этот текст
 const instrumentFor = [
   { text: "кто не боится", highligted: "выделиться", colorClass: "bg-secondary/40" },
-  { text: "кто любит", highligted: "экспериментировать", colorClass: "bg-teal-600/40" },
+  { text: "кто любит", highligted: "эксперименты", colorClass: "bg-teal-600/40" },
   { text: "кто хочет", highligted: "просто играть", colorClass: "bg-amber-600/40" },
 ]
 
