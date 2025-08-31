@@ -30,7 +30,7 @@ const features = [
 <template>
   <div class="space-y-10">
     <PageTitleSection title="Модель А" />
-    <NuxtImg src="model-a/general.jpg" alt="title" class="w-full h-[20rem] md:h-[20rem] lg:h-[30rem] object-cover" />
+    <NuxtImg src="model-a/general.jpg" alt="title" class="w-full h-[10rem] md:h-[20rem] lg:h-[30rem] object-cover" />
 
     <h2 class="text-2xl font-serif">
       Об инструменте
