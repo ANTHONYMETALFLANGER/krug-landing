@@ -5,7 +5,7 @@
 <template>
   <div>
     <!-- Desktop -->
-    <div class="hidden xl:flex flex-col gap-5 h-[90svh] min-h-[67rem] max-h-[80rem] w-full">
+    <div class="hidden xl:flex flex-col gap-5 h-[90svh] min-h-[70rem] max-h-[80rem] w-full">
       <div class="flex gap-5 h-full">
         <div class="w-full h-full">
           <div class="flex flex-col gap-5 h-full">
@@ -69,7 +69,7 @@
     </div>
 
     <!-- Tablet -->
-    <div class="hidden md:flex xl:hidden flex-col gap-5 h-[88svh] min-h-[60rem] max-h-[80rem] w-full">
+    <div class="hidden md:flex xl:hidden flex-col gap-5 h-[88svh] min-h-[60rem] lg:min-h-[70rem] max-h-[80rem] w-full">
       <div class="flex gap-5 h-full">
         <div class="w-full h-full">
           <div class="flex flex-col gap-5 h-full">
