@@ -70,12 +70,12 @@ async function onSubmit(event: FormSubmitEvent<typeof state>) {
     <PageTitleSection title="Конфигуратор" />
 
     <div class="w-full flex justify-center">
-      <div class="max-w-xl flex flex-col md:items-center gap-5">
+      <div class="max-w-xl flex flex-col items-center gap-5">
         <Icon name="mdi:cog" class="size-[4rem] md:size-[6rem] xl:size-[10rem] animate-spin" />
-        <h2 class="text-2xl font-serif md:text-center">
+        <h2 class="text-2xl font-serif text-center">
           Конфигуратор в разработке
         </h2>
-        <p class="text-sm md:text-base md:text-center">
+        <p class="text-sm md:text-base text-center">
           Он появится здесь когда мы начнем продажи. Подпишитесь на рассылку, чтобы быть в курсе.
         </p>
 

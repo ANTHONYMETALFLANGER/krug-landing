@@ -2,7 +2,7 @@
 @import "@nuxt/ui";
 
 @theme static {
-    --font-sans: "IBM Plex Sans", sans-serif;
+    --font-sans: "Inter", sans-serif;
     --font-serif: "Onest", sans-serif;
 
     --animate-hero-main-text-appear: hero-main-text-appear 2s cubic-bezier(0.45,0.01,0.11,0.99);
@@ -81,9 +81,9 @@
     }
 
     .cover-noise-semi-semi-lighter::after {
-        filter: brightness(605%);
+        filter: brightness(705%);
         mix-blend-mode: hard-light;
-        opacity: 0.1;
+        opacity: 0.15;
     }
 
     .cover-noise-lighter::after {

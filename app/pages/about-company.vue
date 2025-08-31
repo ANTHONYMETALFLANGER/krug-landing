@@ -51,7 +51,7 @@ const membersList = [
         </div>
       </div>
 
-      <div class="w-full flex flex-col gap-16 md:flex-row md:gap-5">
+      <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-10">
         <LandingSectionLayout title="Юридическая информация" class="w-full">
           <div class="space-y-[1.5rem] text-sm md:text-base">
             <p>
@@ -77,6 +77,14 @@ const membersList = [
                 <NuxtImg src="rgeu.webp" class="w-full h-full object-contain" />
               </div>
             </div>
+          </div>
+        </LandingSectionLayout>
+
+        <LandingSectionLayout title="Контакты" class="w-full">
+          <div class="space-y-[1.5rem] text-sm md:text-base">
+            <p>
+              Для модели А (и большинства последующих моделей) предполагается выбор из двух конфигураций 24 и 27. Конструкция изначально проектируется под обе конфигурации, а благодаря 3д печати стоимость обеих конфигураций отличается не сильно.
+            </p>
           </div>
         </LandingSectionLayout>
       </div>

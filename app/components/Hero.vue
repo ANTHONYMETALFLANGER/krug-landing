@@ -19,9 +19,10 @@
                   </h1>
                 </div>
 
-                <p>
+                <!-- <p>
                   Инструмент для тех, кто не боится <span class="inline-block leading-[0.8rem] p-1 bg-secondary text-inverted">выделиться</span>
-                </p>
+                </p> -->
+                <HeroTypingText />
               </div>
             </div>
             <div class="bg-primary/10 w-full h-full max-h-[20rem]">
@@ -62,7 +63,6 @@
             poster-url="hero-product-showcase/4-small.jpg"
             :video-aspect-ratio="1"
             default-size-by="height"
-            appearence="darker"
           />
         </div>
       </div>
@@ -83,9 +83,7 @@
                   </h1>
                 </div>
 
-                <p>
-                  Инструмент для тех, кто не боится <span class="inline-block leading-[0.8rem] p-1 bg-secondary text-inverted">выделиться</span>
-                </p>
+                <HeroTypingText />
               </div>
             </div>
             <div class="w-full h-full max-h-[20rem] flex gap-5">
@@ -149,9 +147,7 @@
                   </h1>
                 </div>
 
-                <p>
-                  Инструмент для тех, кто не боится <span class="inline-block leading-[0.6rem] p-1 bg-secondary text-inverted">выделиться</span>
-                </p>
+                <HeroTypingText />
               </div>
             </div>
             <div class="w-full h-full max-h-[11rem] flex gap-5">

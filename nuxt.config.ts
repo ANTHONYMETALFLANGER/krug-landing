@@ -61,4 +61,10 @@ export default defineNuxtConfig({
     defaultImport: "component",
   },
 
+  runtimeConfig: {
+    resend: {
+      apiKey: process.env.ERESEND_API_KEY,
+    },
+  },
+
 })

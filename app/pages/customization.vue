@@ -9,7 +9,7 @@ definePageMeta({
     <PageTitleSection title="Кастомизация" />
     <NuxtImg src="customization/general.jpg" alt="title" class="w-full h-[20rem] md:h-[20rem] lg:h-[30rem] object-cover" />
 
-    <div class="max-w-2xl mx-auto space-y-10">
+    <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-10">
       <LandingSectionLayout title="Цвет">
         <div class="space-y-10">
           <p class="text-sm md:text-base">
@@ -17,14 +17,14 @@ definePageMeta({
           </p>
           <div class="flex gap-5">
             <div class="w-1/2 space-y-5">
-              <NuxtImg src="customization/body.jpg" alt="title" class="w-full h-[10rem] object-cover" />
+              <NuxtImg src="customization/body.jpg" alt="title" class="w-full h-[10rem] object-cover brightness-125" />
               <p class="text-sm md:text-base">
                 Основной цвет — покрывает деку и гриф, формирует общий облик инструмента.
               </p>
             </div>
 
             <div class="w-1/2 space-y-5">
-              <NuxtImg src="customization/accent.jpg" alt="title" class="w-full h-[10rem] object-cover" />
+              <NuxtImg src="customization/accent.jpg" alt="title" class="w-full h-[10rem] object-cover brightness-125" />
               <p class="text-sm md:text-base">
                 Акцентный цвет — используется для крышек звукоснимателей, элементов темброблока, ручек и переключателей, а также, при желании, накладки.
               </p>
