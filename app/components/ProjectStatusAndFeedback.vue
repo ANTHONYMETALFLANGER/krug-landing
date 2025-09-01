@@ -5,21 +5,28 @@ import * as v from "valibot"
 
 const feedbackFormSchema = v.object({
   email: v.pipe(v.string(), v.email()),
-  message: v.string(),
+  name: v.pipe(v.string(), v.maxLength(100)),
+  message: v.pipe(v.string(), v.maxLength(1000)),
+  subscribe: v.boolean(),
 })
 
 const state = reactive({
   email: undefined,
+  name: undefined,
   message: undefined,
+  subscribe: true,
 })
 
 function validate(state: any): FormError[] {
   const errors = []
-  if (!state.email && !state.message) {
+  if (!state.email && !state.message && !state.name) {
     if (!state.email)
       errors.push({ name: "email", message: "Нам нужен ваш email для связи" })
     if (!state.message) {
       errors.push({ name: "message", message: "Опишите вашу идею или пожелание" })
+    }
+    if (!state.name) {
+      errors.push({ name: "name", message: "Нам нужно знать как к вам обращаться" })
     }
   }
   else {
@@ -32,7 +39,10 @@ function validate(state: any): FormError[] {
             errors.push({ name: "email", message: "Введите корректный email" })
             break
           case "message":
-            errors.push({ name: "message", message: "Сообщение содержит данные, которые не получается обработать" })
+            errors.push({ name: "message", message: "Не можем обработать ваше сообщение, максимальная длина сообщения - 1000 символов" })
+            break
+          case "name":
+            errors.push({ name: "name", message: "Не можем обработать ваше имя, максимальная длина имени - 100 символов" })
             break
         }
       })
@@ -42,10 +52,37 @@ function validate(state: any): FormError[] {
   return errors
 }
 
+const isPending = ref(false)
 const feedbackSuccessModalOpen = ref(false)
+const feedbackErrorModalOpen = ref(false)
 async function onSubmit(event: FormSubmitEvent<typeof state>) {
-  feedbackSuccessModalOpen.value = true
-  console.log(event.data)
+  isPending.value = true
+  if (event.data.subscribe) {
+    try {
+      await $fetch("/api/email/subscribe-me", {
+        method: "POST",
+        query: { email: event.data.email },
+      })
+    }
+    catch (error) {
+      isPending.value = false
+      console.error(error)
+      feedbackErrorModalOpen.value = true
+      return
+    }
+  }
+  try {
+    await $fetch("/api/email/send-feedback", {
+      method: "POST",
+      body: event.data,
+    })
+    feedbackSuccessModalOpen.value = true
+  }
+  catch (error) {
+    console.error(error)
+    feedbackErrorModalOpen.value = true
+  }
+  isPending.value = false
 }
 
 const colorMode = useColorMode()
@@ -63,9 +100,29 @@ const colorMode = useColorMode()
         </div>
 
         <p class="w-full">
-          Мы рассмотрим ваше сообщение и, если необходимо, свяжемся с вами
+          Мы рассмотрим ваше сообщение и постараемся связаться с вами
         </p>
         <UButton variant="solid" class="w-fit px-5 py-3 rounded-full" @click="feedbackSuccessModalOpen = false">
+          Ок
+        </UButton>
+      </div>
+    </template>
+  </UModal>
+
+  <UModal v-model:open="feedbackErrorModalOpen" variant="subtle">
+    <template #content>
+      <div class="flex flex-col gap-5 items-end p-8">
+        <div class="flex gap-[1rem] items-center w-full">
+          <Icon name="material-symbols:error-outline" class="text-[3rem] text-error" />
+          <h2 class="w-full text-2xl">
+            Ошибка!
+          </h2>
+        </div>
+
+        <p class="w-full">
+          Не получилось подключиться к серверу, попробуйте позже
+        </p>
+        <UButton variant="solid" class="w-fit px-5 py-3 rounded-full" @click="feedbackErrorModalOpen = false">
           Ок
         </UButton>
       </div>
@@ -116,14 +173,25 @@ const colorMode = useColorMode()
             <UInput v-model="state.email" class="w-full" placeholder="Ваш email" :ui="{ base: 'min-h-13 rounded-none' }" />
           </UFormField>
 
+          <UFormField :ui="{ label: ['text-inverted text-base font-normal'] }" name="name">
+            <UInput v-model="state.name" class="w-full" placeholder="Как к вам обращаться?" :ui="{ base: 'min-h-13 rounded-none' }" />
+          </UFormField>
+
           <UFormField :ui="{ label: ['text-inverted text-base font-normal'] }" name="message">
             <UTextarea v-model="state.message" class="w-full" placeholder="Сообщение" :ui="{ base: 'min-h-32 rounded-none' }" />
           </UFormField>
+
+          <UCheckbox
+            v-model="state.subscribe"
+            label="Подписаться на рассылку (только самое важное)"
+            :ui="{ label: 'text-inverted', indicator: 'bg-default text-default' }"
+          />
 
           <UButton
             class="h-[3.6rem] w-fit px-6 mt-3 text-inverted rounded-full bg-transparent border border-bg hover:outline-2 hover:bg-transparent transition-all duration-100"
             type="submit"
             trailing-icon="material-symbols:send-outline"
+            :loading="isPending"
           >
             Отправить
           </UButton>

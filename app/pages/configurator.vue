@@ -38,9 +38,19 @@ function validate(state: any): FormError[] {
 }
 
 const notifySuccessModalOpen = ref(false)
+const notifyErrorModalOpen = ref(false)
 async function onSubmit(event: FormSubmitEvent<typeof state>) {
-  notifySuccessModalOpen.value = true
-  console.log(event.data)
+  try {
+    await $fetch("/api/email/subscribe-me", {
+      method: "POST",
+      query: { email: event.data.email },
+    })
+    notifySuccessModalOpen.value = true
+  }
+  catch (error) {
+    console.error(error)
+    notifyErrorModalOpen.value = true
+  }
 }
 </script>
 
@@ -59,6 +69,26 @@ async function onSubmit(event: FormSubmitEvent<typeof state>) {
           Мы уведомим вас как только конфигуратор будет доступен
         </p>
         <UButton variant="solid" class="w-fit px-5 py-3 rounded-full" @click="notifySuccessModalOpen = false">
+          Ок
+        </UButton>
+      </div>
+    </template>
+  </UModal>
+
+  <UModal v-model:open="notifyErrorModalOpen" variant="subtle">
+    <template #content>
+      <div class="flex flex-col gap-5 items-end p-8">
+        <div class="flex gap-[1rem] items-center w-full">
+          <Icon name="material-symbols:error-outline" class="text-[3rem] text-error" />
+          <h2 class="w-full text-2xl">
+            Ошибка!
+          </h2>
+        </div>
+
+        <p class="w-full">
+          Не получилось подключиться к серверу, попробуйте позже
+        </p>
+        <UButton variant="solid" class="w-fit px-5 py-3 rounded-full" @click="notifyErrorModalOpen = false">
           Ок
         </UButton>
       </div>

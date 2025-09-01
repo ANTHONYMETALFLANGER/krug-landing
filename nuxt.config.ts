@@ -31,18 +31,17 @@ export default defineNuxtConfig({
     },
   },
 
+  colorMode: {
+    preference: "dark", // default value of $colorMode.preference
+    fallback: "dark", // fallback value if not system preference found
+  },
+
   icon: {
-    customCollections: [
-      // {
-      //   prefix: "brand-games",
-      //   dir: "./layers/shared-ui/app/assets/brand-games",
-      // },
-    ],
     clientBundle: {
       includeCustomCollections: true,
     },
     serverBundle: {
-      collections: ["material-symbols", "material-symbols-light", "ic"],
+      collections: ["material-symbols"],
     },
   },
 
@@ -64,6 +63,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     resend: {
       apiKey: process.env.ERESEND_API_KEY,
+      subscribersAudienceId: process.env.RESEND_SUBSCRIBERS_AUDIENCE_ID,
+      feedbackReciveEmail: process.env.RESEND_FEEDBACK_RECIVE_EMAIL,
     },
   },
 
