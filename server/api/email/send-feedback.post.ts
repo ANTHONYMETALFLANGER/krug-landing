@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
   const resend = new Resend(useRuntimeConfig().resend.apiKey)
 
   await resend.emails.send({
-    from: "Acme <onboarding@krug-guitars.ru>",
+    from: "Acme <onboarding@resend.dev>",
     to: [useRuntimeConfig().resend.feedbackReciveEmail],
     subject: "Feedback from krug-guitars.ru",
     html: `
