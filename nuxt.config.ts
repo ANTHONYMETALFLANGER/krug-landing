@@ -16,6 +16,10 @@ export default defineNuxtConfig({
     ],
   },
 
+  nitro: {
+    static: true,
+  },
+
   modules: [
     "@nuxt/content",
     "@nuxt/eslint",
