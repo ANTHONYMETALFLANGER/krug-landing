@@ -78,7 +78,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <p class="md:text-xl font-serif">
+  <p class="md:text-xl">
     Инструмент для тех, {{ currentTypedBaseString }} <span
       v-if="currentTypedHighlightedString.length > 0"
       class="inline-block leading-[0.8rem] p-1 animate-pulse"

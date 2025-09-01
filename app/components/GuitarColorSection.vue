@@ -22,6 +22,15 @@ const colorMode = useColorMode()
 const bgTransparency = computed(() => colorMode.value === "dark" ? "30%" : "10%")
 
 const isPresetImageLoaded = ref(false)
+const isPresetLoadAnimationPlayed = ref(false)
+
+watch(isPresetImageLoaded, () => {
+  if (isPresetImageLoaded.value) {
+    setTimeout(() => {
+      isPresetLoadAnimationPlayed.value = true
+    }, 300)
+  }
+})
 </script>
 
 <template>
@@ -40,13 +49,13 @@ const isPresetImageLoaded = ref(false)
 
         <div class="relative w-full h-[20rem] md:h-[30rem] brightness-125 dark:brightness-100 lg:h-full flex items-center justify-center">
           <NuxtImg
-            :class="isPresetImageLoaded ? 'blur-0 saturate-100 opacity-100' : 'blur-2xl saturate-0 opacity-40'"
+            :class="isPresetImageLoaded && isPresetLoadAnimationPlayed ? 'blur-0 saturate-100 opacity-100' : 'blur-2xl saturate-0 opacity-40'"
             class="hidden transition-all duration-300 md:block absolute left-[3%] top-1/2 translate-y-[-35%] md:-translate-y-1/2 h-[16rem] md:h-[18rem] xl:h-[22rem] object-cover object-left"
             :src="currentGuitarImagePath" :alt="currentPreset.name"
             @load="isPresetImageLoaded = true"
           />
           <NuxtImg
-            :class="isPresetImageLoaded ? 'blur-0 saturate-100 opacity-100' : 'blur-2xl saturate-0 opacity-40'"
+            :class="isPresetImageLoaded && isPresetLoadAnimationPlayed ? 'blur-0 saturate-100 opacity-100' : 'blur-2xl saturate-0 opacity-40'"
             class="block transition-all duration-300 md:hidden absolute left-1/2 -translate-x-1/2 top-[3.5rem] rotate-270 h-[16rem] min-w-[22rem] w-[22rem] object-cover object-left"
             :src="currentGuitarImagePath" :alt="currentPreset.name"
             @load="isPresetImageLoaded = true"

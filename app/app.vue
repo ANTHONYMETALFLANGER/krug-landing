@@ -4,4 +4,4 @@
       <NuxtPage />
     </NuxtLayout>
   </UApp>
-</template> 
+</template>

@@ -15,7 +15,7 @@ defineProps<{
     </div>
     <USkeleton v-else class="w-full h-[13rem] md:h-[18rem] lg:h-[20rem] rounded-none bg-primary/20" />
     <div class="flex flex-col gap-[2rem]">
-      <h2 class="text-2xl">
+      <h2 class="text-2xl font-serif">
         {{ title }}
       </h2>
       <p class="text-sm md:text-base">

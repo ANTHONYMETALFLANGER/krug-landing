@@ -76,7 +76,7 @@
             <div class="h-full w-full">
               <div class="w-full h-full flex flex-col items-start justify-center">
                 <div class="my-auto lg:translate-y-[-10%]">
-                  <h1 class="text-[4rem] leading-[5rem] lg:text-[5.5rem] lg:leading-[6.5rem] animate-hero-main-text-appear">
+                  <h1 class="text-[4rem] leading-[5rem] lg:text-[5.5rem] lg:leading-[6.5rem] animate-hero-main-text-appear font-serif">
                     Новые формы,<br> новый звук,<br><span
                       class="inline-block bg-black text-amber-50 dark:bg-amber-50 dark:text-black leading-none animate-hero-selected-text-appear text-nowrap"
                     >новый стиль.</span><span class="leading-[6.6rem] lg:leading-[9rem]">‎ </span>
@@ -133,14 +133,14 @@
     </div>
 
     <!-- Mobile -->
-    <div class="flex md:hidden flex-col gap-5 h-[42rem] w-full">
+    <div class="flex md:hidden flex-col gap-5 h-[39rem] w-full">
       <div class="flex gap-5 h-full">
         <div class="w-full h-full">
           <div class="flex flex-col gap-5 h-full">
             <div class="h-full w-full">
               <div class="w-full h-full flex flex-col items-start justify-center">
                 <div class="my-auto">
-                  <h1 class="text-[2.8rem] leading-[3.5rem] animate-hero-main-text-appear">
+                  <h1 class="text-[2.8rem] leading-[3.5rem] translate-y-[-10%] animate-hero-main-text-appear font-serif">
                     Новые формы,<br> новый звук,<br><span
                       class="inline-block bg-black text-amber-50 dark:bg-amber-50 dark:text-black leading-none animate-hero-selected-text-appear text-nowrap"
                     >новый стиль.</span><span class="leading-[4.2rem]">‎ </span>

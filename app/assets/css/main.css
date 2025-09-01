@@ -2,7 +2,7 @@
 @import "@nuxt/ui";
 
 @theme static {
-    --font-sans: "Inter", sans-serif;
+    --font-sans: "Onest", sans-serif;
     --font-serif: "Onest", sans-serif;
 
     --animate-hero-main-text-appear: hero-main-text-appear 2s cubic-bezier(0.45,0.01,0.11,0.99);
