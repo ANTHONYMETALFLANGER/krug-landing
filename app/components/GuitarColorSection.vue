@@ -1,9 +1,10 @@
 <script setup lang="ts">
 const presets = ref(guitarColorsPresets())
+const presetsSorted = useState("presetsSorted", () => presets.value.toSorted(() => Math.random() - 0.5))
 
-const currentPresetName = ref<string>(presets.value[0]!.name)
+const currentPresetIndex = ref<number>(0)
 
-const currentPreset = computed(() => presets.value.find(preset => preset.name === currentPresetName.value))
+const currentPreset = computed(() => presetsSorted.value[currentPresetIndex.value])
 
 const bgColorHex = computed<string>(() => {
   if (currentPreset.value?.deck === "#000000") {
@@ -13,10 +14,6 @@ const bgColorHex = computed<string>(() => {
 })
 
 const currentGuitarImagePath = computed(() => `guitar_color_schemes/${currentPreset.value?.name}.webp`)
-
-onMounted(() => {
-  presets.value.sort(() => Math.random() - 0.5)
-})
 
 const colorMode = useColorMode()
 const bgTransparency = computed(() => colorMode.value === "dark" ? "30%" : "10%")
@@ -66,15 +63,15 @@ watch(isPresetImageLoaded, () => {
     <div class="w-full h-[8rem] md:h-[10rem] lg:w-[19rem] lg:h-[46.5rem] overflow-auto">
       <div class="w-full h-full flex lg:flex-col gap-8 items-center justify-start px-10 lg:py-10">
         <TwoColorsCircle
-          v-for="preset in presets"
+          v-for="preset, index in presetsSorted"
           :key="preset.name"
           :color1="preset.deck"
           :color2="preset.accent"
           class="size-[3.2rem] md:size-[5.2rem] transition-all duration-100"
-          :class="currentPresetName === preset.name ? 'outline-3 outline-primary' : ''"
+          :class="currentPresetIndex === index ? 'outline-3 outline-primary' : ''"
           @click="() => {
-            if (currentPresetName === preset.name) return
-            currentPresetName = preset.name
+            if (currentPresetIndex === index) return
+            currentPresetIndex = index
             isPresetImageLoaded = false
           }"
         />

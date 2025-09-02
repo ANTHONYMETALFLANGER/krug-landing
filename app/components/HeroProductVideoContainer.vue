@@ -68,7 +68,6 @@ const fadeImagesOnScrollPercent = computed(() => {
             'w-full h-auto top-1/2 left-0 -translate-y-1/2': sizeBy === 'width',
             'w-auto h-full object-cover top-0 left-1/2 -translate-x-1/2': sizeBy === 'height',
           }"
-          @loadeddata="console.log('loadeddata')"
         />
       </ClientOnly>
 
