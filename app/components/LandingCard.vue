@@ -9,9 +9,7 @@ defineProps<{
 <template>
   <div class="w-full flex flex-col gap-9 md:gap-18">
     <div v-if="imageUrl" class="bg-default w-full h-[13rem] md:h-[16rem] lg:h-[18rem] scale-100 border border-primary overflow-hidden">
-      <NuxtImg v-slot="{ isLoaded }" :src="imageUrl" alt="card-image" class="w-full h-full object-cover mix-blend-difference">
-        <USkeleton v-if="!isLoaded" class="w-full h-full rounded-none bg-primary/20" />
-      </NuxtImg>
+      <NuxtImg placeholder :src="imageUrl" alt="card-image" class="w-full h-full object-cover mix-blend-difference" />
     </div>
     <USkeleton v-else class="w-full h-[13rem] md:h-[18rem] lg:h-[20rem] rounded-none bg-primary/20" />
     <div class="flex flex-col gap-[2rem]">

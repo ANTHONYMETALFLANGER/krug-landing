@@ -10,10 +10,10 @@
         <p>Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).</p>
         <div class="flex gap-8 h-[6rem] md:h-[9.3rem] max-w-[21.5rem] md:max-w-[33rem]">
           <div class="w-[53%] h-full">
-            <NuxtImg src="fond_sodeystviya_inov.webp" class="w-full h-full object-cover" />
+            <NuxtImg src="fond_sodeystviya_inov.webp" class="w-full h-full object-cover" placeholder />
           </div>
           <div class="w-[37%] h-full">
-            <NuxtImg src="rgeu.webp" class="w-full h-full object-cover" />
+            <NuxtImg src="rgeu.webp" class="w-full h-full object-cover" placeholder />
           </div>
         </div>
       </div>
