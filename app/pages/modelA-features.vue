@@ -38,7 +38,7 @@ const features = [
 
     <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-20 md:gap-10">
       <div v-for="feature in features" :key="feature.title" class="w-full flex flex-col gap-8 md:h-[30rem] md:flex-row md:gap-10">
-        <NuxtImg :src="feature.imageUrl" :alt="feature.title" class="w-full md:w-1/2 h-[20rem] md:h-full object-cover" />
+        <NuxtImg :src="feature.imageUrl" :alt="feature.title" class="w-full md:w-1/2 h-[20rem] md:h-full object-cover" placeholder />
 
         <LandingSectionLayout :title="feature.title" class="w-full md:w-1/2">
           <p class="text-sm md:text-base">

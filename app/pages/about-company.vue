@@ -39,7 +39,7 @@ const membersList = [
       <div class="w-full grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
         <div v-for="member in membersList" :key="member.name" class="w-full h-full flex flex-col items-center gap-5">
           <div class="w-full aspect-square rounded-full overflow-hidden">
-            <NuxtImg :src="member.image" :alt="member.name" class="w-full h-full object-cover" />
+            <NuxtImg :src="member.image" :alt="member.name" class="w-full h-full object-cover" placeholder />
           </div>
 
           <h2 class="text-lg md:text-xl text-center font-semibold">
@@ -71,10 +71,10 @@ const membersList = [
             <p>Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).</p>
             <div class="flex gap-8 h-[6rem] md:h-[9.3rem] max-w-[21.5rem] md:max-w-[33rem]">
               <div class="w-[53%] h-full">
-                <NuxtImg src="fond_sodeystviya_inov.webp" class="w-full h-full object-contain" />
+                <NuxtImg src="fond_sodeystviya_inov.webp" class="w-full h-full object-contain" placeholder />
               </div>
               <div class="w-[37%] h-full">
-                <NuxtImg src="rgeu.webp" class="w-full h-full object-contain" />
+                <NuxtImg src="rgeu.webp" class="w-full h-full object-contain" placeholder />
               </div>
             </div>
           </div>
