@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useElementSize, useWindowScroll } from "@vueuse/core"
+import { useElementSize, useWindowScroll, useWindowSize } from "@vueuse/core"
 
 const props = withDefaults(defineProps<{
   videoUrl: string
@@ -7,6 +7,7 @@ const props = withDefaults(defineProps<{
   videoAspectRatio: number
   defaultSizeBy?: "width" | "height"
   appearence?: "darker" | "lighter"
+  scrollFadeMultiplier?: number
 }>(), {
   defaultSizeBy: "width",
   appearence: "lighter",
@@ -46,7 +47,7 @@ const fadeImagesOnScrollPercent = computed(() => {
   // convert scroll value to value between 0 and 1
   if (!window)
     return 0
-  return y.value / window.innerHeight
+  return (y.value / window.innerHeight) * (props.scrollFadeMultiplier ?? 1)
 })
 </script>
 

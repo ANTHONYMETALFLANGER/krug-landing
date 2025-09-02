@@ -1,9 +1,15 @@
 <script setup lang="ts">
+import { useElementSize, useWindowSize } from "@vueuse/core"
 
+const heroContainerRef = useTemplateRef("heroContainerRef")
+const { height: heroContainerHeight } = useElementSize(heroContainerRef)
+const { height: windowHeight } = useWindowSize()
+
+const diffHeightsFactor = computed(() => windowHeight.value / heroContainerHeight.value)
 </script>
 
 <template>
-  <div>
+  <div ref="heroContainerRef">
     <!-- Desktop -->
     <div class="hidden xl:flex flex-col gap-5 h-[90svh] min-h-[70rem] max-h-[80rem] w-full">
       <div class="flex gap-5 h-full">
@@ -32,6 +38,7 @@
                 :video-aspect-ratio="2.25"
                 default-size-by="width"
                 appearence="darker"
+                :scroll-fade-multiplier="diffHeightsFactor"
               />
             </div>
           </div>
@@ -43,6 +50,7 @@
             poster-url="hero-product-showcase/1-large.jpg"
             :video-aspect-ratio="0.6"
             default-size-by="height"
+            :scroll-fade-multiplier="diffHeightsFactor"
           />
         </div>
       </div>
@@ -55,6 +63,7 @@
             poster-url="hero-product-showcase/3-large.jpg"
             :video-aspect-ratio="4.64"
             default-size-by="width"
+            :scroll-fade-multiplier="diffHeightsFactor"
           />
         </div>
         <div class="bg-primary/10 h-full aspect-square">
@@ -63,6 +72,7 @@
             poster-url="hero-product-showcase/4-small.jpg"
             :video-aspect-ratio="1"
             default-size-by="height"
+            :scroll-fade-multiplier="diffHeightsFactor"
           />
         </div>
       </div>
@@ -94,6 +104,7 @@
                   :video-aspect-ratio="2.25"
                   default-size-by="width"
                   appearence="darker"
+                  :scroll-fade-multiplier="diffHeightsFactor"
                 />
               </div>
               <div class="bg-primary/10 w-[50%] h-full">
@@ -103,6 +114,7 @@
                   poster-url="hero-product-showcase/1-small.jpg"
                   :video-aspect-ratio="0.84"
                   default-size-by="height"
+                  :scroll-fade-multiplier="diffHeightsFactor"
                 />
               </div>
             </div>
@@ -118,6 +130,7 @@
             poster-url="hero-product-showcase/3-large.jpg"
             :video-aspect-ratio="4.64"
             default-size-by="width"
+            :scroll-fade-multiplier="diffHeightsFactor"
           />
         </div>
         <div class="hidden lg:block bg-primary/10 h-full aspect-square">
@@ -126,6 +139,7 @@
             poster-url="hero-product-showcase/4-small.jpg"
             :video-aspect-ratio="1"
             default-size-by="height"
+            :scroll-fade-multiplier="diffHeightsFactor"
             appearence="darker"
           />
         </div>
@@ -158,6 +172,7 @@
                   :video-aspect-ratio="1"
                   default-size-by="width"
                   appearence="darker"
+                  :scroll-fade-multiplier="diffHeightsFactor"
                 />
               </div>
               <div class="bg-primary/10 w-[56%] h-full">
@@ -166,6 +181,7 @@
                   poster-url="hero-product-showcase/4-small.jpg"
                   :video-aspect-ratio="1"
                   default-size-by="width"
+                  :scroll-fade-multiplier="diffHeightsFactor"
                 />
               </div>
             </div>
@@ -180,6 +196,7 @@
             poster-url="hero-product-showcase/3-small.jpg"
             :video-aspect-ratio="2.35"
             default-size-by="width"
+            :scroll-fade-multiplier="diffHeightsFactor"
           />
         </div>
       </div>
