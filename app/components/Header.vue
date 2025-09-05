@@ -32,7 +32,7 @@ const menuEntries = computed(() => [
     </a>
 
     <!-- Navigation in header -->
-    <div class="flex md:gap-[1.16rem] lg:gap-0 items-center lg:w-full lg:max-w-[74.8rem]">
+    <div class="flex md:gap-[1.16rem] lg:gap-0 items-center lg:w-full lg:max-w-[84.8rem]">
       <nav class="hidden lg:grid grid-cols-4 w-full">
         <template v-for="entry in menuEntries" :key="entry.title">
           <a v-if="!entry.comingSoon" class="hover:text-secondary transition-colors duration-200" :href="entry.href">{{ entry.title }}</a>

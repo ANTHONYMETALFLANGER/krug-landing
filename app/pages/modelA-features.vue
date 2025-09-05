@@ -30,13 +30,15 @@ const features = [
 <template>
   <div class="space-y-10">
     <PageTitleSection title="Модель А" />
-    <NuxtImg src="model-a/general.jpg" alt="title" class="w-full h-[10rem] md:h-[20rem] lg:h-[30rem] object-cover" />
+    <div class="bg-primary/5">
+      <NuxtImg src="model-a/general.webp" alt="title" class="w-full h-[10rem] md:h-[20rem] lg:h-[30rem] mb-10 md:mb-20 lg:mb-30 object-contain" />
+    </div>
 
     <h2 class="text-2xl font-serif">
       Об инструменте
     </h2>
 
-    <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-20 md:gap-10">
+    <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20">
       <div v-for="feature in features" :key="feature.title" class="w-full flex flex-col gap-8 md:h-[30rem] md:flex-row md:gap-10">
         <NuxtImg :src="feature.imageUrl" :alt="feature.title" class="w-full md:w-1/2 h-[20rem] md:h-full object-cover" placeholder />
 

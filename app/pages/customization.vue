@@ -7,9 +7,9 @@ definePageMeta({
 <template>
   <div class="space-y-10">
     <PageTitleSection title="Кастомизация" />
-    <NuxtImg src="customization/general.jpg" alt="title" class="w-full h-[20rem] md:h-[20rem] lg:h-[30rem] object-cover" placeholder />
+    <NuxtImg src="customization/general.jpg" alt="title" class="w-full h-[20rem] md:h-[20rem] lg:h-[30rem] mb-10 md:mb-20 lg:mb-30 object-cover" placeholder />
 
-    <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20">
       <LandingSectionLayout title="Цвет">
         <div class="space-y-10">
           <p class="text-sm md:text-base">

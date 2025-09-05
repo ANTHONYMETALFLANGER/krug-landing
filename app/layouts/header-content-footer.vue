@@ -1,6 +1,6 @@
 <template>
   <div class="relative w-full px-[1rem] md:px-[2rem] bg-default transition-colors">
-    <div class="max-w-[90rem] flex flex-col mx-auto">
+    <div class="max-w-[100rem] flex flex-col mx-auto">
       <div class="sticky top-0 z-50 w-full">
         <Header />
       </div>
