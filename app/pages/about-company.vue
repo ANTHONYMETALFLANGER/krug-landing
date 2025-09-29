@@ -62,16 +62,31 @@ const membersList = [
       </div>
 
       <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <LandingSectionLayout title="Юридическая информация" class="w-full">
-          <div class="space-y-[1.5rem] text-sm md:text-base">
-            <p>
-              ООО «ГНП»<br>
-              Юр. адрес: 398007, РОССИЯ, ЛИПЕЦКАЯ ОБЛАСТЬ, Г.О. ГОРОД ЛИПЕЦК, Г ЛИПЕЦК, УЛ САФОНОВА, Д. 1, КВ. 2<br>
-              ИНН: 4800019135<br>
-              ОГРН: 1244800008100
-            </p>
-          </div>
-        </LandingSectionLayout>
+        <div class="space-y-10">
+          <LandingSectionLayout title="Юридическая информация" class="w-full">
+            <div class="space-y-[1.5rem] text-sm md:text-base">
+              <p>
+                ООО «ГНП»<br>
+                Юр. адрес: 398007, РОССИЯ, ЛИПЕЦКАЯ ОБЛАСТЬ, Г.О. ГОРОД ЛИПЕЦК, Г ЛИПЕЦК, УЛ САФОНОВА, Д. 1, КВ. 2<br>
+                ИНН: 4800019135<br>
+                ОГРН: 1244800008100
+              </p>
+            </div>
+          </LandingSectionLayout>
+
+          <LandingSectionLayout title="Контакты" class="w-full">
+            <div class="space-y-[0.8rem] text-sm md:text-base">
+              <p>
+                <Icon name="material-symbols:alternate-email" />
+                Email: mikhail_0914@mail.com
+              </p>
+              <p>
+                <Icon name="material-symbols:phone-enabled-sharp" />
+                Телефон: +7 (920) 523-49-56
+              </p>
+            </div>
+          </LandingSectionLayout>
+        </div>
 
         <!-- Support -->
         <LandingSectionLayout title="Поддержка проекта" class="w-full">
@@ -90,19 +105,6 @@ const membersList = [
                 <NuxtImg src="rgeu.webp" class="w-full h-full object-contain" placeholder />
               </div>
             </div>
-          </div>
-        </LandingSectionLayout>
-
-        <LandingSectionLayout title="Контакты" class="w-full">
-          <div class="space-y-[0.8rem] text-sm md:text-base">
-            <p>
-              <Icon name="material-symbols:alternate-email" />
-              Email: mikhail_0914@mail.com
-            </p>
-            <p>
-              <Icon name="material-symbols:phone-enabled-sharp" />
-              Телефон: +7 (920) 523-49-56
-            </p>
           </div>
         </LandingSectionLayout>
       </div>
