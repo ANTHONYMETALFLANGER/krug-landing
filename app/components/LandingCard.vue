@@ -1,14 +1,27 @@
 <script setup lang="ts">
-defineProps<{
+withDefaults(defineProps<{
   title: string
   text: string
   imageUrl?: string
-}>()
+  imageStyle?: {
+    outlined?: boolean
+    padding?: boolean
+  }
+}>(), {
+  imageStyle: () => ({
+    outlined: false,
+    padding: false,
+  }),
+})
 </script>
 
 <template>
   <div class="w-full flex flex-col gap-9 md:gap-18">
-    <div v-if="imageUrl" class="bg-default w-full h-[13rem] md:h-[16rem] lg:h-[18rem] scale-100 border border-primary overflow-hidden">
+    <div
+      v-if="imageUrl"
+      class="bg-default w-full h-[13rem] md:h-[16rem] lg:h-[18rem] scale-100 overflow-hidden"
+      :class="{ 'outline-2 outline-primary/50 outline-dashed': imageStyle.outlined, 'p-2': imageStyle.padding }"
+    >
       <NuxtImg placeholder :src="imageUrl" alt="card-image" class="w-full h-full object-cover mix-blend-difference" />
     </div>
     <USkeleton v-else class="w-full h-[13rem] md:h-[18rem] lg:h-[20rem] rounded-none bg-primary/20" />

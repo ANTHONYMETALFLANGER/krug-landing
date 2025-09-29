@@ -63,32 +63,23 @@
     }
 
     .cover-noise-darker::after {
-        filter: brightness(705%);
-        mix-blend-mode: multiply;
-        opacity: 0.35;
+        @apply brightness-[705%] opacity-[0.35] mix-blend-multiply;
     }
 
     .cover-noise-semi-darker::after {
-        filter: brightness(805%);
-        mix-blend-mode: multiply;
-        opacity: 0.3;
+        @apply brightness-[805%] opacity-[0.3] mix-blend-multiply;
     }
 
     .cover-noise-semi-lighter::after {
-        filter: brightness(505%);
-        mix-blend-mode: hard-light;
-        opacity: 0.3;
+        @apply brightness-[505%] opacity-[0.3] mix-blend-hard-light;
     }
 
     .cover-noise-semi-semi-lighter::after {
-        filter: brightness(705%);
-        mix-blend-mode: hard-light;
-        opacity: 0.15;
+        @apply brightness-[705%] opacity-[0.15] mix-blend-hard-light;
     }
 
     .cover-noise-lighter::after {
-        mix-blend-mode: soft-light;
-        filter: brightness(505%);
+        @apply mix-blend-soft-light brightness-[505%];
     }
 
     @keyframes noiseFX {

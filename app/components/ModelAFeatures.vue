@@ -32,6 +32,10 @@ const features = computed(() => [
           :title="feature.title"
           :text="feature.text"
           :image-url="feature.imageUrl"
+          :image-style="{
+            outlined: true,
+            padding: true,
+          }"
         />
       </div>
     </div>

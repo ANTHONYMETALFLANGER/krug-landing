@@ -16,7 +16,7 @@ const bgColorHex = computed<string>(() => {
 const currentGuitarImagePath = computed(() => `guitar_color_schemes/${currentPreset.value?.name}.webp`)
 
 const colorMode = useColorMode()
-const bgTransparency = computed(() => colorMode.value === "dark" ? "30%" : "10%")
+const bgTransparency = computed(() => colorMode.value === "dark" ? "10%" : "10%")
 
 const isPresetImageLoaded = ref(false)
 const isPresetLoadAnimationPlayed = ref(false)
@@ -32,7 +32,7 @@ watch(isPresetImageLoaded, () => {
 
 <template>
   <div v-if="currentPreset" class="relative flex flex-col widget-bg transition-colors duration-300 lg:flex-row gap-5 lg:gap-0 overflow-hidden">
-    <div class="w-full p-10 md:pb-0 lg:py-10 lg:pl-10 lg:pr-0 cover-noise" :class="colorMode.value === 'dark' ? 'cover-noise-semi-semi-lighter' : 'cover-noise-semi-darker'">
+    <div class="w-full p-10 md:pb-0 lg:py-10 lg:pl-10 lg:pr-0 cover-noise cover-noise-semi-semi-lighter after:invert dark:after:invert-0">
       <div class="w-full h-full flex flex-col">
         <div class="w-full h-[3.6rem] flex justify-between items-center">
           <h2 class="text-2xl font-serif">
@@ -68,7 +68,7 @@ watch(isPresetImageLoaded, () => {
           :color1="preset.deck"
           :color2="preset.accent"
           class="size-[3.2rem] md:size-[5.2rem] transition-all duration-100"
-          :class="currentPresetIndex === index ? 'outline-3 outline-primary' : ''"
+          :class="currentPresetIndex === index ? 'outline-2 outline-primary/50 outline-offset-4 outline-dashed' : ''"
           @click="() => {
             if (currentPresetIndex === index) return
             currentPresetIndex = index

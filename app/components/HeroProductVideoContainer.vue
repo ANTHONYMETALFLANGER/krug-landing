@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useElementSize, useWindowScroll, useWindowSize } from "@vueuse/core"
+import { useElementSize } from "@vueuse/core"
 
 const props = withDefaults(defineProps<{
   videoUrl: string
@@ -41,19 +41,15 @@ onMounted(() => {
     }, 300)
   })
 })
-
-const { y } = useWindowScroll()
-const fadeImagesOnScrollPercent = computed(() => {
-  // convert scroll value to value between 0 and 1
-  if (!window)
-    return 0
-  return (y.value / window.innerHeight) * (props.scrollFadeMultiplier ?? 1)
-})
 </script>
 
 <template>
   <div class="w-full h-full overflow-hidden">
-    <div ref="containerRef" class="relative w-full h-full overflow-hidden cover-noise transition-all duration-300" :class="appearence === 'darker' ? 'cover-noise-darker' : 'cover-noise-semi-semi-lighter'">
+    <div
+      ref="containerRef"
+      class="relative w-full h-full overflow-hidden cover-noise transition-all duration-300"
+      :class="appearence === 'darker' ? 'cover-noise-semi-lighter after:invert' : 'cover-noise-semi-semi-lighter'"
+    >
       <div class="absolute fade-on-scroll w-full h-full top-0 left-0 z-30" />
 
       <!-- Video plays only once -->
@@ -87,16 +83,3 @@ const fadeImagesOnScrollPercent = computed(() => {
     </div>
   </div>
 </template>
-
-<style lang="postcss" scoped>
-.fade-on-scroll::after {
-  content: '';
-  background: var(--ui-bg);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: v-bind("fadeImagesOnScrollPercent");
-}
-</style>

@@ -13,7 +13,9 @@ function scrollToTop() {
   <div class="w-full py-5 flex gap-5 flex-col-reverse md:flex-row md:justify-between">
     <div class="flex gap-6 items-center">
       <Logo class="hidden md:block w-full min-w-[2rem] max-w-[2rem] aspect-square fill-primary opacity-40" />
-      <p>© ООО «ТРЕШГЕЙНПАНК», 2025</p>
+      <p class="text-sm text-muted">
+        © ООО «ГНП», 2025
+      </p>
     </div>
 
     <UButton

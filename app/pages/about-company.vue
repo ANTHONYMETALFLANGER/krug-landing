@@ -5,24 +5,34 @@ definePageMeta({
 
 const membersList = [
   {
-    name: "Павлович",
-    position: "Руководитель",
-    image: "/gallery/small/sjnmxoklas.jpg",
+    name: "Унчиков Андрей",
+    position: "???",
+    image: "/faces/1.jpeg",
   },
   {
-    name: "Правая рука павловича",
-    position: "Руководитель",
-    image: "/gallery/small/5237888698702491982_121.jpg",
+    name: "Кононов Дмитрий",
+    position: "Разработка электроники, 3D моделирование и проектирование, работа с производственным оборудованием",
+    image: "/faces/2.jpeg",
   },
   {
-    name: "Правая нога павловича",
-    position: "Руководитель",
-    image: "/gallery/small/IMG_20250808_132705408.jpg",
+    name: "Колесников Михаил",
+    position: "Генеральный директор",
+    image: "/faces/3.jpeg",
   },
   {
-    name: "Левая нога павловича",
-    position: "Руководитель",
-    image: "IRzWRCdBCkI.jpg",
+    name: "Беспяткин Владимир",
+    position: "Дизайн бренда, программирование микроконтроллеров, 3D моделирование и визуализация",
+    image: "/faces/4.jpeg",
+  },
+  {
+    name: "Самозанятый 1",
+    position: "???",
+    image: "/faces/3.jpeg",
+  },
+  {
+    name: "Самозанятый 2",
+    position: "???",
+    image: "/faces/3.jpeg",
   },
 ]
 </script>
@@ -33,10 +43,10 @@ const membersList = [
 
     <div class="mt-8 md:mt-0 space-y-16 lg:space-y-20">
       <p class="max-w-[50rem]">
-        Наша компания была основана в 2025 году и специализируется на разработке, продаже современных звуковых устройств.
+        Наша компания была основана в 2025 году и специализируется на разработке, продаже современных и необычных звуковых устройств.
       </p>
 
-      <div class="w-full grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+      <div class="w-full grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5">
         <div v-for="member in membersList" :key="member.name" class="w-full h-full flex flex-col items-center gap-5">
           <div class="w-full aspect-square rounded-full overflow-hidden">
             <NuxtImg :src="member.image" :alt="member.name" class="w-full h-full object-cover" placeholder />
@@ -55,7 +65,10 @@ const membersList = [
         <LandingSectionLayout title="Юридическая информация" class="w-full">
           <div class="space-y-[1.5rem] text-sm md:text-base">
             <p>
-              Для модели А (и большинства последующих моделей) предполагается выбор из двух конфигураций 24 и 27. Конструкция изначально проектируется под обе конфигурации, а благодаря 3д печати стоимость обеих конфигураций отличается не сильно.
+              ООО «ГНП»<br>
+              Юр. адрес: 398007, РОССИЯ, ЛИПЕЦКАЯ ОБЛАСТЬ, Г.О. ГОРОД ЛИПЕЦК, Г ЛИПЕЦК, УЛ САФОНОВА, Д. 1, КВ. 2<br>
+              ИНН: 4800019135<br>
+              ОГРН: 1244800008100
             </p>
           </div>
         </LandingSectionLayout>
@@ -81,9 +94,14 @@ const membersList = [
         </LandingSectionLayout>
 
         <LandingSectionLayout title="Контакты" class="w-full">
-          <div class="space-y-[1.5rem] text-sm md:text-base">
+          <div class="space-y-[0.8rem] text-sm md:text-base">
             <p>
-              Для модели А (и большинства последующих моделей) предполагается выбор из двух конфигураций 24 и 27. Конструкция изначально проектируется под обе конфигурации, а благодаря 3д печати стоимость обеих конфигураций отличается не сильно.
+              <Icon name="material-symbols:alternate-email" />
+              Email: mikhail_0914@mail.com
+            </p>
+            <p>
+              <Icon name="material-symbols:phone-enabled-sharp" />
+              Телефон: +7 (920) 523-49-56
             </p>
           </div>
         </LandingSectionLayout>

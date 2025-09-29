@@ -24,109 +24,110 @@ const menuEntries = computed(() => [
 
 <template>
   <div
-    class="w-full h-[7.2rem] md:h-[6.2rem] transition-all flex items-center justify-between gap-[8rem] bg-default"
-    :class="{ 'h-[6.2rem]! px-[1rem]': y > scrollBreakpoint }"
+    class="w-full h-[5.6rem] md:h-[6.2rem] flex justify-center bg-default/70 backdrop-blur-2xl"
   >
-    <a href="/">
-      <Logo class="w-full min-w-[3.4rem] max-w-[3.4rem] aspect-square fill-primary" />
-    </a>
+    <div class="w-full h-full max-w-[100rem] px-[1rem] md:px-[2rem] flex items-center justify-between gap-[8rem] transition-all" :class="{ 'px-[2rem] md:px-[3rem]': y > scrollBreakpoint }">
+      <a href="/">
+        <Logo class="w-full min-w-[3.4rem] max-w-[3.4rem] aspect-square fill-primary" />
+      </a>
 
-    <!-- Navigation in header -->
-    <div class="flex md:gap-[1.16rem] lg:gap-0 items-center lg:w-full lg:max-w-[84.8rem]">
-      <nav class="hidden lg:grid grid-cols-4 w-full">
-        <template v-for="entry in menuEntries" :key="entry.title">
-          <a v-if="!entry.comingSoon" class="hover:text-secondary transition-colors duration-200" :href="entry.href">{{ entry.title }}</a>
-          <UTooltip
-            v-else :content="{
-              align: 'start',
-              side: 'bottom',
-              sideOffset: 8,
-            }"
-            :ui="{
-              content: 'p-4',
-              text: 'text-base',
-            }"
-            class="text-default!"
-            text="Раздел в разработке..."
-          >
-            <a class="opacity-45 cursor-not-allowed" :disabled="true">{{ entry.title }}</a>
-          </UTooltip>
-        </template>
-      </nav>
+      <!-- Navigation in header -->
+      <div class="flex md:gap-[1.16rem] lg:gap-0 items-center lg:w-full lg:max-w-[84.8rem]">
+        <nav class="hidden lg:grid grid-cols-4 w-full">
+          <template v-for="entry in menuEntries" :key="entry.title">
+            <a v-if="!entry.comingSoon" class="hover:text-secondary transition-colors duration-200" :href="entry.href">{{ entry.title }}</a>
+            <UTooltip
+              v-else :content="{
+                align: 'start',
+                side: 'bottom',
+                sideOffset: 8,
+              }"
+              :ui="{
+                content: 'p-4',
+                text: 'text-base',
+              }"
+              class="text-default!"
+              text="Раздел в разработке..."
+            >
+              <a class="opacity-45 cursor-not-allowed" :disabled="true">{{ entry.title }}</a>
+            </UTooltip>
+          </template>
+        </nav>
 
-      <!-- Tablet menu -->
-      <UPopover
-        :content="{
-          align: 'start',
-          side: 'left',
-          sideOffset: 16,
-        }" class="hidden md:block lg:hidden" mode="hover"
-      >
-        <UButton class="h-[3.6rem] w-[6rem] rounded-full">
-          Меню
-        </UButton>
+        <!-- Tablet menu -->
+        <UPopover
+          :content="{
+            align: 'start',
+            side: 'left',
+            sideOffset: 16,
+          }" class="hidden md:block lg:hidden" mode="hover"
+        >
+          <UButton class="h-[3.6rem] w-[6rem] rounded-full">
+            Меню
+          </UButton>
 
-        <template #content>
-          <div class="flex flex-col gap-5 items-center w-full max-w-[64rem] p-6">
-            <nav class="flex flex-col gap-5 w-full">
-              <template v-for="entry in menuEntries" :key="entry.title">
-                <a v-if="!entry.comingSoon" class="hover:text-secondary transition-colors duration-200" :href="entry.href">{{ entry.title }}</a>
-                <UTooltip
-                  v-else :content="{
-                    align: 'start',
-                    side: 'bottom',
-                    sideOffset: 8,
-                  }"
-                  :ui="{
-                    content: 'p-4',
-                    text: 'text-base',
-                  }"
-                  class="text-default!"
-                  text="Раздел в разработке..."
-                >
-                  <a class="opacity-45 cursor-not-allowed" :disabled="true">{{ entry.title }}</a>
-                </UTooltip>
-              </template>
-            </nav>
-          </div>
-        </template>
-      </UPopover>
+          <template #content>
+            <div class="flex flex-col gap-5 items-center w-full max-w-[64rem] p-6">
+              <nav class="flex flex-col gap-5 w-full">
+                <template v-for="entry in menuEntries" :key="entry.title">
+                  <a v-if="!entry.comingSoon" class="hover:text-secondary transition-colors duration-200" :href="entry.href">{{ entry.title }}</a>
+                  <UTooltip
+                    v-else :content="{
+                      align: 'start',
+                      side: 'bottom',
+                      sideOffset: 8,
+                    }"
+                    :ui="{
+                      content: 'p-4',
+                      text: 'text-base',
+                    }"
+                    class="text-default!"
+                    text="Раздел в разработке..."
+                  >
+                    <a class="opacity-45 cursor-not-allowed" :disabled="true">{{ entry.title }}</a>
+                  </UTooltip>
+                </template>
+              </nav>
+            </div>
+          </template>
+        </UPopover>
 
-      <!-- Mobile menu -->
-      <UDrawer class="md:hidden">
-        <UButton class="h-[3.6rem] w-[6rem] rounded-full flex items-center justify-center">
-          Меню
-        </UButton>
+        <!-- Mobile menu -->
+        <UDrawer class="md:hidden">
+          <UButton class="h-[3.6rem] w-[6rem] rounded-full flex items-center justify-center">
+            Меню
+          </UButton>
 
-        <template #content>
-          <div class="flex flex-col gap-5 items-start w-full max-w-[64rem] p-6">
-            <nav class="flex flex-col gap-5 w-full">
-              <template v-for="entry in menuEntries" :key="entry.title">
-                <a v-if="!entry.comingSoon" class="hover:text-secondary transition-colors duration-200" :href="entry.href">{{ entry.title }}</a>
-                <UTooltip
-                  v-else :content="{
-                    align: 'start',
-                    side: 'bottom',
-                    sideOffset: 8,
-                  }"
-                  :ui="{
-                    content: 'p-4',
-                    text: 'text-base',
-                  }"
-                  class="text-default!"
-                  text="Раздел в разработке..."
-                >
-                  <a class="opacity-45 cursor-not-allowed" :disabled="true">{{ entry.title }}</a>
-                </UTooltip>
-              </template>
-            </nav>
-            <USeparator class="w-full" />
-            <ColorModeToggle class="size-[3rem]" />
-          </div>
-        </template>
-      </UDrawer>
+          <template #content>
+            <div class="flex flex-col gap-5 items-start w-full max-w-[64rem] p-6">
+              <nav class="flex flex-col gap-5 w-full">
+                <template v-for="entry in menuEntries" :key="entry.title">
+                  <a v-if="!entry.comingSoon" class="hover:text-secondary transition-colors duration-200" :href="entry.href">{{ entry.title }}</a>
+                  <UTooltip
+                    v-else :content="{
+                      align: 'start',
+                      side: 'bottom',
+                      sideOffset: 8,
+                    }"
+                    :ui="{
+                      content: 'p-4',
+                      text: 'text-base',
+                    }"
+                    class="text-default!"
+                    text="Раздел в разработке..."
+                  >
+                    <a class="opacity-45 cursor-not-allowed" :disabled="true">{{ entry.title }}</a>
+                  </UTooltip>
+                </template>
+              </nav>
+              <USeparator class="w-full" />
+              <ColorModeToggle class="size-[3rem]" />
+            </div>
+          </template>
+        </UDrawer>
 
-      <ColorModeToggle class="hidden md:block" />
+        <ColorModeToggle class="hidden md:block" />
+      </div>
     </div>
   </div>
 </template>

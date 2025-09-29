@@ -30,8 +30,8 @@ const features = [
 <template>
   <div class="space-y-10">
     <PageTitleSection title="Модель А" />
-    <div class="bg-primary/5">
-      <NuxtImg src="model-a/general.webp" alt="title" class="w-full h-[10rem] md:h-[20rem] lg:h-[30rem] mb-10 md:mb-20 lg:mb-30 object-contain" />
+    <div class="outline-2 outline-dashed outline-primary/50 p-2 h-[20rem] md:h-[20rem] lg:h-[30rem] mb-10 md:mb-20 lg:mb-30 ">
+      <NuxtImg src="model-a/general.webp" alt="title" class="w-full h-full object-contain" />
     </div>
 
     <h2 class="text-2xl font-serif">
