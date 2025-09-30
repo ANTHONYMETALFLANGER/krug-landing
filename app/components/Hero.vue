@@ -50,7 +50,7 @@ const diffHeightsFactor = computed(() => windowHeight.value / heroContainerHeigh
         </div>
         <div class="bg-primary/10 w-[56%] h-full">
           <HeroProductVideoContainer
-            class="contrast-[103%] dark:contrast-[108%] brightness-[150%] dark:brightness-[120%]"
+            class="contrast-[95%] dark:contrast-[108%] brightness-[150%] dark:brightness-[120%]"
             video-url="hero-product-showcase/1-large.mp4"
             poster-url="hero-product-showcase/1-large.jpg"
             :video-aspect-ratio="0.6"
@@ -63,7 +63,7 @@ const diffHeightsFactor = computed(() => windowHeight.value / heroContainerHeigh
       <div class="w-full h-full max-h-[14rem] flex gap-5">
         <div class="bg-primary/10 h-full w-full">
           <HeroProductVideoContainer
-            class="brightness-180 dark:brightness-130 contrast-[110%]"
+            class="brightness-180 dark:brightness-130 contrast-[95%]"
             video-url="hero-product-showcase/3-large.mp4"
             poster-url="hero-product-showcase/3-large.jpg"
             :video-aspect-ratio="4.64"

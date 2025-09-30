@@ -7,32 +7,32 @@ const membersList = [
   {
     name: "Унчиков Андрей",
     position: "???",
-    image: "/faces/1.jpeg",
+    image: "/faces/1.jpg",
   },
   {
     name: "Кононов Дмитрий",
     position: "Разработка электроники, 3D моделирование и проектирование, работа с производственным оборудованием",
-    image: "/faces/2.jpeg",
+    image: "/faces/2.jpg",
   },
   {
     name: "Колесников Михаил",
     position: "Генеральный директор",
-    image: "/faces/3.jpeg",
+    image: "/faces/3.jpg",
   },
   {
     name: "Беспяткин Владимир",
     position: "Дизайн бренда, программирование микроконтроллеров, 3D моделирование и визуализация",
-    image: "/faces/4.jpeg",
+    image: "/faces/4.jpg",
   },
   {
-    name: "Самозанятый 1",
-    position: "???",
-    image: "/faces/3.jpeg",
+    name: "???",
+    position: "IT Специалист, разрабортка сайта",
+    image: "/faces/5.jpg",
   },
   {
-    name: "Самозанятый 2",
-    position: "???",
-    image: "/faces/3.jpeg",
+    name: "???",
+    position: "Оператор лазерного станка",
+    image: "/faces/6.jpg",
   },
 ]
 </script>
