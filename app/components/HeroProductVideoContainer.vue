@@ -8,6 +8,7 @@ const props = withDefaults(defineProps<{
   defaultSizeBy?: "width" | "height"
   appearence?: "darker" | "lighter"
   scrollFadeMultiplier?: number
+  reverseVideo?: boolean
 }>(), {
   defaultSizeBy: "width",
   appearence: "lighter",

@@ -39,10 +39,9 @@ const diffHeightsFactor = computed(() => windowHeight.value / heroContainerHeigh
               <HeroProductVideoContainer
                 video-url="hero-product-showcase/2-large.mp4"
                 poster-url="hero-product-showcase/2-large.jpg"
-                class="contrast-[105%] saturate-[80%]"
+                class="contrast-[90%] brightness-130 dark:brightness-90 dark:contrast-[100%] saturate-[90%]"
                 :video-aspect-ratio="2.25"
                 default-size-by="width"
-                appearence="darker"
                 :scroll-fade-multiplier="diffHeightsFactor"
               />
             </div>
@@ -50,7 +49,7 @@ const diffHeightsFactor = computed(() => windowHeight.value / heroContainerHeigh
         </div>
         <div class="bg-primary/10 w-[56%] h-full">
           <HeroProductVideoContainer
-            class="contrast-[95%] dark:contrast-[108%] brightness-[150%] dark:brightness-[120%]"
+            class="contrast-[95%] brightness-[100%] dark:brightness-[90%] dark:contrast-[100%]"
             video-url="hero-product-showcase/1-large.mp4"
             poster-url="hero-product-showcase/1-large.jpg"
             :video-aspect-ratio="0.6"
@@ -63,7 +62,7 @@ const diffHeightsFactor = computed(() => windowHeight.value / heroContainerHeigh
       <div class="w-full h-full max-h-[14rem] flex gap-5">
         <div class="bg-primary/10 h-full w-full">
           <HeroProductVideoContainer
-            class="brightness-180 dark:brightness-130 contrast-[95%]"
+            class="brightness-180 dark:brightness-120 contrast-[105%]"
             video-url="hero-product-showcase/3-large.mp4"
             poster-url="hero-product-showcase/3-large.jpg"
             :video-aspect-ratio="4.64"
@@ -79,7 +78,6 @@ const diffHeightsFactor = computed(() => windowHeight.value / heroContainerHeigh
             class="contrast-[105%]"
             default-size-by="height"
             :scroll-fade-multiplier="diffHeightsFactor"
-            appearence="darker"
           />
         </div>
       </div>
@@ -114,8 +112,7 @@ const diffHeightsFactor = computed(() => windowHeight.value / heroContainerHeigh
                   poster-url="hero-product-showcase/2-large.jpg"
                   :video-aspect-ratio="2.25"
                   default-size-by="width"
-                  appearence="darker"
-                  class="contrast-[105%] saturate-[80%]"
+                  class="contrast-[90%] brightness-125 dark:brightness-90 dark:contrast-[100%] saturate-[90%]"
                   :scroll-fade-multiplier="diffHeightsFactor"
                 />
               </div>
@@ -137,7 +134,7 @@ const diffHeightsFactor = computed(() => windowHeight.value / heroContainerHeigh
       <div class="w-full h-[16rem] flex gap-5">
         <div class="bg-primary/10 h-full w-full">
           <HeroProductVideoContainer
-            class="brightness-180 dark:brightness-130 contrast-[110%]"
+            class="brightness-180 dark:brightness-135 contrast-[110%]"
             video-url="hero-product-showcase/3-large.mp4"
             poster-url="hero-product-showcase/3-large.jpg"
             :video-aspect-ratio="4.64"
@@ -145,14 +142,14 @@ const diffHeightsFactor = computed(() => windowHeight.value / heroContainerHeigh
             :scroll-fade-multiplier="diffHeightsFactor"
           />
         </div>
-        <div class="hidden lg:block bg-primary/10 h-full aspect-square">
+        <div class="hidden lg:block h-full aspect-square outline-2 outline-primary/50 p-2 outline-dashed">
           <HeroProductVideoContainer
             video-url="hero-product-showcase/4-small.mp4"
             poster-url="hero-product-showcase/4-small.jpg"
             :video-aspect-ratio="1"
             default-size-by="height"
             :scroll-fade-multiplier="diffHeightsFactor"
-            appearence="darker"
+            class="contrast-[100%] dark:contrast-[105%]"
           />
         </div>
       </div>
@@ -183,8 +180,8 @@ const diffHeightsFactor = computed(() => windowHeight.value / heroContainerHeigh
                   poster-url="hero-product-showcase/2-small.jpg"
                   :video-aspect-ratio="1"
                   default-size-by="width"
-                  appearence="darker"
                   :scroll-fade-multiplier="diffHeightsFactor"
+                  class="contrast-[96%]"
                 />
               </div>
               <div class="bg-primary/10 w-[56%] h-full">
@@ -208,7 +205,7 @@ const diffHeightsFactor = computed(() => windowHeight.value / heroContainerHeigh
             poster-url="hero-product-showcase/3-small.jpg"
             :video-aspect-ratio="2.35"
             default-size-by="width"
-            class="brightness-130 dark:brightness-110 contrast-[90%] dark:contrast-[100%]"
+            class="brightness-130 dark:brightness-100 contrast-[90%] dark:contrast-[100%]"
             :scroll-fade-multiplier="diffHeightsFactor"
           />
         </div>

@@ -25,12 +25,12 @@ const membersList = [
     image: "/faces/4.jpg",
   },
   {
-    name: "???",
+    name: "Дубовицкий Кирилл",
     position: "IT Специалист, разрабортка сайта",
     image: "/faces/5.jpg",
   },
   {
-    name: "???",
+    name: "Вьюнов Никита",
     position: "Оператор лазерного станка",
     image: "/faces/6.jpg",
   },
