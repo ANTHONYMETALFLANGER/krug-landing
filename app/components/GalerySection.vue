@@ -38,7 +38,7 @@ onMounted(() => {
     <div class="hidden lg:flex w-full h-[43rem] gap-5">
       <div class="w-[45%] h-full flex flex-col gap-5">
         <div class="relative w-full h-[40%] bg-primary/20 overflow-hidden">
-          <div class="w-full h-full cover-noise cover-noise-galery">
+          <div class="w-full h-full">
             <NuxtImg v-slot="{ isLoaded }" :src="imagesSorted[0]!.src" :alt="imagesSorted[0]!.alt" class="w-full h-full hover:scale-105 transition-all duration-300 object-cover">
               <USkeleton v-if="!isLoaded" class="w-full h-full rounded-none bg-primary/20" />
             </NuxtImg>
@@ -46,7 +46,7 @@ onMounted(() => {
         </div>
 
         <div class="relative w-full h-[60%] bg-primary/20 overflow-hidden">
-          <div class="w-full h-full cover-noise cover-noise-galery">
+          <div class="w-full h-full">
             <NuxtImg v-slot="{ isLoaded }" :src="imagesSorted[1]!.src" :alt="imagesSorted[1]!.alt" class="w-full h-full hover:scale-105 transition-all duration-300 object-cover">
               <USkeleton v-if="!isLoaded" class="w-full h-full rounded-none bg-primary/20" />
             </NuxtImg>
@@ -57,7 +57,7 @@ onMounted(() => {
       <div class="w-[55%] h-full flex flex-col gap-5">
         <div class="w-full h-[70%] flex gap-5">
           <div class="relative w-[40%] h-full bg-primary/20 overflow-hidden">
-            <div class="w-full h-full cover-noise cover-noise-galery">
+            <div class="w-full h-full">
               <NuxtImg v-slot="{ isLoaded }" :src="imagesSorted[2]!.src" :alt="imagesSorted[2]!.alt" class="w-full h-full hover:scale-105 transition-all duration-300 object-cover">
                 <USkeleton v-if="!isLoaded" class="w-full h-full rounded-none bg-primary/20" />
               </NuxtImg>
@@ -65,14 +65,14 @@ onMounted(() => {
           </div>
           <div class="w-[60%] h-full flex flex-col gap-5">
             <div class="relative w-full h-[45%] bg-primary/20 overflow-hidden">
-              <div class="w-full h-full cover-noise cover-noise-galery">
+              <div class="w-full h-full">
                 <NuxtImg v-slot="{ isLoaded }" :src="imagesSorted[3]!.src" :alt="imagesSorted[3]!.alt" class="w-full h-full hover:scale-105 transition-all duration-300 object-cover">
                   <USkeleton v-if="!isLoaded" class="w-full h-full rounded-none bg-primary/20" />
                 </NuxtImg>
               </div>
             </div>
             <div class="relative w-full h-[55%] bg-primary/20 overflow-hidden">
-              <div class="w-full h-full cover-noise cover-noise-galery">
+              <div class="w-full h-full">
                 <NuxtImg v-slot="{ isLoaded }" :src="imagesSorted[4]!.src" :alt="imagesSorted[4]!.alt" class="w-full h-full hover:scale-105 transition-all duration-300 object-cover">
                   <USkeleton v-if="!isLoaded" class="w-full h-full rounded-none bg-primary/20" />
                 </NuxtImg>
@@ -82,7 +82,7 @@ onMounted(() => {
         </div>
 
         <div class="relative w-full h-[30%] bg-primary/20 overflow-hidden">
-          <div class="w-full h-full cover-noise cover-noise-galery">
+          <div class="w-full h-full">
             <NuxtImg v-slot="{ isLoaded }" :src="imagesSorted[5]!.src" :alt="imagesSorted[5]!.alt" class="w-full h-full hover:scale-105 transition-all duration-300 object-cover">
               <USkeleton v-if="!isLoaded" class="w-full h-full rounded-none bg-primary/20" />
             </NuxtImg>
@@ -95,7 +95,7 @@ onMounted(() => {
     <div class="hidden md:flex lg:hidden flex-col gap-5 h-[47rem] w-full">
       <div class="w-full h-1/3 flex gap-5">
         <div class="relative w-[65%] h-full bg-primary/20 overflow-hidden">
-          <div class="w-full h-full cover-noise cover-noise-galery">
+          <div class="w-full h-full">
             <NuxtImg v-slot="{ isLoaded }" :src="imagesSorted[0]!.src" :alt="imagesSorted[0]!.alt" class="w-full h-full hover:scale-105 transition-all duration-300 object-cover">
               <USkeleton v-if="!isLoaded" class="w-full h-full rounded-none bg-primary/20" />
             </NuxtImg>
@@ -103,7 +103,7 @@ onMounted(() => {
         </div>
 
         <div class="relative w-[35%] h-full bg-primary/20 overflow-hidden">
-          <div class="w-full h-full cover-noise cover-noise-galery">
+          <div class="w-full h-full">
             <NuxtImg v-slot="{ isLoaded }" :src="imagesSorted[1]!.src" :alt="imagesSorted[1]!.alt" class="w-full h-full hover:scale-105 transition-all duration-300 object-cover">
               <USkeleton v-if="!isLoaded" class="w-full h-full rounded-none bg-primary/20" />
             </NuxtImg>
@@ -112,7 +112,7 @@ onMounted(() => {
       </div>
 
       <div class="relative w-full h-1/3 bg-primary/20 overflow-hidden">
-        <div class="w-full h-full cover-noise cover-noise-galery">
+        <div class="w-full h-full">
           <NuxtImg v-slot="{ isLoaded }" :src="imagesSorted[2]!.src" :alt="imagesSorted[2]!.alt" class="w-full h-full hover:scale-105 transition-all duration-300 object-cover">
             <USkeleton v-if="!isLoaded" class="w-full h-full rounded-none bg-primary/20" />
           </NuxtImg>
@@ -121,7 +121,7 @@ onMounted(() => {
 
       <div class="w-full h-1/3 flex gap-5">
         <div class="relative w-[45%] h-full bg-primary/20 overflow-hidden">
-          <div class="w-full h-full cover-noise cover-noise-galery">
+          <div class="w-full h-full">
             <NuxtImg v-slot="{ isLoaded }" :src="imagesSorted[3]!.src" :alt="imagesSorted[3]!.alt" class="w-full h-full hover:scale-105 transition-all duration-300 object-cover">
               <USkeleton v-if="!isLoaded" class="w-full h-full rounded-none bg-primary/20" />
             </NuxtImg>
@@ -129,7 +129,7 @@ onMounted(() => {
         </div>
 
         <div class="relative w-[55%] h-full bg-primary/20 overflow-hidden">
-          <div class="w-full h-full cover-noise cover-noise-galery">
+          <div class="w-full h-full">
             <NuxtImg v-slot="{ isLoaded }" :src="imagesSorted[4]!.src" :alt="imagesSorted[4]!.alt" class="w-full h-full hover:scale-105 transition-all duration-300 object-cover">
               <USkeleton v-if="!isLoaded" class="w-full h-full rounded-none bg-primary/20" />
             </NuxtImg>
@@ -141,7 +141,7 @@ onMounted(() => {
     <!-- Mobile -->
     <div class="flex md:hidden flex-col gap-5 h-[40rem] w-full">
       <div class="relative w-full h-1/3 bg-primary/20 overflow-hidden">
-        <div class="w-full h-full cover-noise cover-noise-galery">
+        <div class="w-full h-full">
           <NuxtImg v-slot="{ isLoaded }" :src="imagesSorted[0]!.src" :alt="imagesSorted[0]!.alt" class="w-full h-full hover:scale-105 transition-all duration-300 object-cover">
             <USkeleton v-if="!isLoaded" class="w-full h-full rounded-none bg-primary/20" />
           </NuxtImg>
@@ -150,7 +150,7 @@ onMounted(() => {
 
       <div class="w-full h-1/3 flex gap-5">
         <div class="relative w-1/2 h-full bg-primary/20 overflow-hidden">
-          <div class="w-full h-full cover-noise cover-noise-galery">
+          <div class="w-full h-full">
             <NuxtImg v-slot="{ isLoaded }" :src="imagesSorted[1]!.src" :alt="imagesSorted[1]!.alt" class="w-full h-full hover:scale-105 transition-all duration-300 object-cover">
               <USkeleton v-if="!isLoaded" class="w-full h-full rounded-none bg-primary/20" />
             </NuxtImg>
@@ -158,7 +158,7 @@ onMounted(() => {
         </div>
 
         <div class="relative w-1/2 h-full bg-primary/20 overflow-hidden">
-          <div class="w-full h-full cover-noise cover-noise-galery">
+          <div class="w-full h-full">
             <NuxtImg v-slot="{ isLoaded }" :src="imagesSorted[2]!.src" :alt="imagesSorted[2]!.alt" class="w-full h-full hover:scale-105 transition-all duration-300 object-cover">
               <USkeleton v-if="!isLoaded" class="w-full h-full rounded-none bg-primary/20" />
             </NuxtImg>
@@ -167,7 +167,7 @@ onMounted(() => {
       </div>
 
       <div class="relative w-full h-1/3 bg-primary/20 overflow-hidden">
-        <div class="w-full h-full cover-noise cover-noise-galery">
+        <div class="w-full h-full">
           <NuxtImg v-slot="{ isLoaded }" :src="imagesSorted[3]!.src" :alt="imagesSorted[3]!.alt" class="w-full h-full hover:scale-105 transition-all duration-300 object-cover">
             <USkeleton v-if="!isLoaded" class="w-full h-full rounded-none bg-primary/20" />
           </NuxtImg>

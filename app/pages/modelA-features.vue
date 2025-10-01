@@ -52,7 +52,7 @@ const features = [
 
     <div class="w-full flex justify-center">
       <UButton
-        class="w-fit px-6 py-4 mt-3 text-primary rounded-full bg-transparent border outline-primary border-primary hover:outline-2 hover:bg-transparent transition-all duration-100"
+        class="w-full md:w-fit px-6 py-4 mt-3 text-primary rounded-full bg-transparent border outline-primary border-primary hover:outline-2 hover:bg-transparent transition-all duration-100"
         trailing-icon="material-symbols:arrow-forward"
         href="/gallery"
       >

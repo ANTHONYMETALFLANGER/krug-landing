@@ -39,7 +39,7 @@ const diffHeightsFactor = computed(() => windowHeight.value / heroContainerHeigh
               <HeroProductVideoContainer
                 video-url="hero-product-showcase/2-large.mp4"
                 poster-url="hero-product-showcase/2-large.jpg"
-                class="contrast-[90%] brightness-130 dark:brightness-90 dark:contrast-[100%] saturate-[90%]"
+                class="contrast-[90%] brightness-130 dark:brightness-110 dark:contrast-[95%] saturate-[90%]"
                 :video-aspect-ratio="2.25"
                 default-size-by="width"
                 :scroll-fade-multiplier="diffHeightsFactor"
@@ -62,7 +62,7 @@ const diffHeightsFactor = computed(() => windowHeight.value / heroContainerHeigh
       <div class="w-full h-full max-h-[14rem] flex gap-5">
         <div class="bg-primary/10 h-full w-full">
           <HeroProductVideoContainer
-            class="brightness-180 dark:brightness-120 contrast-[105%]"
+            class="brightness-150 dark:brightness-140 contrast-[85%] dark:contrast-[100%]"
             video-url="hero-product-showcase/3-large.mp4"
             poster-url="hero-product-showcase/3-large.jpg"
             :video-aspect-ratio="4.64"
@@ -75,7 +75,7 @@ const diffHeightsFactor = computed(() => windowHeight.value / heroContainerHeigh
             video-url="hero-product-showcase/4-small.mp4"
             poster-url="hero-product-showcase/4-small.jpg"
             :video-aspect-ratio="1"
-            class="contrast-[105%]"
+            class="contrast-95 brightness-110"
             default-size-by="height"
             :scroll-fade-multiplier="diffHeightsFactor"
           />
@@ -112,13 +112,13 @@ const diffHeightsFactor = computed(() => windowHeight.value / heroContainerHeigh
                   poster-url="hero-product-showcase/2-large.jpg"
                   :video-aspect-ratio="2.25"
                   default-size-by="width"
-                  class="contrast-[90%] brightness-125 dark:brightness-90 dark:contrast-[100%] saturate-[90%]"
+                  class="contrast-[90%] brightness-125 dark:brightness-110 dark:contrast-[90%] saturate-[90%]"
                   :scroll-fade-multiplier="diffHeightsFactor"
                 />
               </div>
               <div class="bg-primary/10 w-[50%] h-full">
                 <HeroProductVideoContainer
-                  class="contrast-[103%] dark:contrast-[108%] brightness-[150%] dark:brightness-[120%]"
+                  class="contrast-[103%] dark:contrast-[100%] brightness-[150%] dark:brightness-145"
                   video-url="hero-product-showcase/1-small.mp4"
                   poster-url="hero-product-showcase/1-small.jpg"
                   :video-aspect-ratio="0.84"
@@ -134,7 +134,7 @@ const diffHeightsFactor = computed(() => windowHeight.value / heroContainerHeigh
       <div class="w-full h-[16rem] flex gap-5">
         <div class="bg-primary/10 h-full w-full">
           <HeroProductVideoContainer
-            class="brightness-180 dark:brightness-135 contrast-[110%]"
+            class="brightness-180 dark:brightness-145"
             video-url="hero-product-showcase/3-large.mp4"
             poster-url="hero-product-showcase/3-large.jpg"
             :video-aspect-ratio="4.64"
@@ -181,7 +181,7 @@ const diffHeightsFactor = computed(() => windowHeight.value / heroContainerHeigh
                   :video-aspect-ratio="1"
                   default-size-by="width"
                   :scroll-fade-multiplier="diffHeightsFactor"
-                  class="contrast-[96%]"
+                  class="contrast-[90%] brightness-110"
                 />
               </div>
               <div class="bg-primary/10 w-[56%] h-full">
@@ -205,7 +205,7 @@ const diffHeightsFactor = computed(() => windowHeight.value / heroContainerHeigh
             poster-url="hero-product-showcase/3-small.jpg"
             :video-aspect-ratio="2.35"
             default-size-by="width"
-            class="brightness-130 dark:brightness-100 contrast-[90%] dark:contrast-[100%]"
+            class="brightness-130 dark:brightness-95 contrast-[90%]"
             :scroll-fade-multiplier="diffHeightsFactor"
           />
         </div>

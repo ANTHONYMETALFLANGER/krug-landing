@@ -26,7 +26,7 @@ const menuEntries = computed(() => [
   <div
     class="w-full h-[5.6rem] md:h-[6.2rem] flex justify-center bg-default/70 backdrop-blur-2xl"
   >
-    <div class="w-full h-full max-w-[100rem] px-[1rem] md:px-[2rem] flex items-center justify-between transition-all" :class="{ 'px-[2rem] md:px-[3rem]': y > scrollBreakpoint }">
+    <div class="w-full h-full max-w-[100rem] pl-[1rem] pr-[0.8rem] md:pl-[2rem] md:pr-[1.5rem] flex items-center justify-between transition-all" :class="{ 'pl-[2rem] pr-[1.7rem] md:pl-[3rem] md:pr-[2.8rem]': y > scrollBreakpoint }">
       <a href="/">
         <Logo class="w-full min-w-[3.4rem] max-w-[3.4rem] aspect-square fill-primary" />
       </a>
@@ -54,15 +54,15 @@ const menuEntries = computed(() => [
       </nav>
 
       <!-- Tablet menu -->
-      <div class="flex gap-5">
+      <div class="flex gap-5 pl-5">
         <UPopover
           :content="{
             align: 'start',
-            side: 'left',
+            side: 'right',
             sideOffset: 16,
           }" class="hidden md:block lg:hidden" mode="hover"
         >
-          <UButton class="h-[3.6rem] w-[6rem] rounded-full">
+          <UButton variant="outline" class="h-[3.6rem] px-6 rounded-full">
             Меню
           </UButton>
 
@@ -91,13 +91,12 @@ const menuEntries = computed(() => [
             </div>
           </template>
         </UPopover>
-
-        <ColorModeToggle class="hidden md:block lg:hidden" />
       </div>
 
       <!-- Mobile menu -->
+      <div class="w-full md:hidden" />
       <UDrawer class="md:hidden">
-        <UButton class="h-[3.6rem] w-[6rem] rounded-full flex items-center justify-center">
+        <UButton variant="outline" class="h-[3.6rem] px-6 rounded-full">
           Меню
         </UButton>
 
@@ -129,7 +128,15 @@ const menuEntries = computed(() => [
         </template>
       </UDrawer>
 
-      <ColorModeToggle class="hidden lg:block" />
+      <div class="w-full hidden md:block lg:hidden" />
+      <ColorModeToggle class="hidden md:block" />
+      <UButton
+        icon="material-symbols:chat-outline"
+        class="h-[3.6rem] px-6 rounded-full ml-4 md:text-nowrap"
+        href="/#project-status-and-feedback"
+      >
+        Обратная связь
+      </UButton>
     </div>
   </div>
 </template>

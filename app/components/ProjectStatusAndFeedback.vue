@@ -157,46 +157,46 @@ const colorMode = useColorMode()
         </p>
       </div>
 
-      <div class="w-full lg:w-[37%] space-y-[3rem]">
-        <div class="space-y-[1rem]">
-          <h2 class="text-2xl font-serif">
-            Обратная связь
-          </h2>
-          <p class="text-sm md:text-base w-full md:w-[80%] lg:w-full">
-            Свяжитесь с нами если хотите уточнить что либо, касательно наших продуктов. Мы постараемся ответить как можно скорее
-          </p>
+        <div id="project-status-and-feedback" class="w-full lg:w-[37%] space-y-[3rem]">
+          <div class="space-y-[1rem]">
+            <h2 class="text-2xl font-serif">
+              Обратная связь
+            </h2>
+            <p class="text-sm md:text-base w-full md:w-[80%] lg:w-full">
+              Свяжитесь с нами если хотите уточнить что либо, касательно наших продуктов. Мы постараемся ответить как можно скорее
+            </p>
+          </div>
+
+          <!-- Feedback form -->
+          <UForm :validate="validate" :state="state" class="flex flex-col gap-3" @submit="onSubmit">
+            <UFormField :ui="{ label: ['text-inverted text-base font-normal'] }" name="email">
+              <UInput v-model="state.email" class="w-full" placeholder="Ваш email" :ui="{ base: 'min-h-13 rounded-none' }" />
+            </UFormField>
+
+            <UFormField :ui="{ label: ['text-inverted text-base font-normal'] }" name="name">
+              <UInput v-model="state.name" class="w-full" placeholder="Как к вам обращаться?" :ui="{ base: 'min-h-13 rounded-none' }" />
+            </UFormField>
+
+            <UFormField :ui="{ label: ['text-inverted text-base font-normal'] }" name="message">
+              <UTextarea v-model="state.message" class="w-full" placeholder="Сообщение" :ui="{ base: 'min-h-32 rounded-none' }" />
+            </UFormField>
+
+            <UCheckbox
+              v-model="state.subscribe"
+              label="Подписаться на рассылку (только самое важное)"
+              :ui="{ label: 'text-inverted', indicator: 'bg-default text-default' }"
+            />
+
+            <UButton
+              class="h-[3.6rem] w-fit px-6 mt-3 text-inverted rounded-full bg-transparent border border-bg hover:outline-2 hover:bg-transparent transition-all duration-100"
+              type="submit"
+              trailing-icon="material-symbols:send-outline"
+              :loading="isPending"
+            >
+              Отправить
+            </UButton>
+          </UForm>
         </div>
-
-        <!-- Feedback form -->
-        <UForm :validate="validate" :state="state" class="flex flex-col gap-3" @submit="onSubmit">
-          <UFormField :ui="{ label: ['text-inverted text-base font-normal'] }" name="email">
-            <UInput v-model="state.email" class="w-full" placeholder="Ваш email" :ui="{ base: 'min-h-13 rounded-none' }" />
-          </UFormField>
-
-          <UFormField :ui="{ label: ['text-inverted text-base font-normal'] }" name="name">
-            <UInput v-model="state.name" class="w-full" placeholder="Как к вам обращаться?" :ui="{ base: 'min-h-13 rounded-none' }" />
-          </UFormField>
-
-          <UFormField :ui="{ label: ['text-inverted text-base font-normal'] }" name="message">
-            <UTextarea v-model="state.message" class="w-full" placeholder="Сообщение" :ui="{ base: 'min-h-32 rounded-none' }" />
-          </UFormField>
-
-          <UCheckbox
-            v-model="state.subscribe"
-            label="Подписаться на рассылку (только самое важное)"
-            :ui="{ label: 'text-inverted', indicator: 'bg-default text-default' }"
-          />
-
-          <UButton
-            class="h-[3.6rem] w-fit px-6 mt-3 text-inverted rounded-full bg-transparent border border-bg hover:outline-2 hover:bg-transparent transition-all duration-100"
-            type="submit"
-            trailing-icon="material-symbols:send-outline"
-            :loading="isPending"
-          >
-            Отправить
-          </UButton>
-        </UForm>
-      </div>
     </div>
   </div>
 </template>
@@ -206,5 +206,9 @@ const colorMode = useColorMode()
   filter: brightness(505%);
   mix-blend-mode: hard-light;
   opacity: 0.5;
+}
+
+#project-status-and-feedback {
+  scroll-margin-top: 200px;
 }
 </style>
