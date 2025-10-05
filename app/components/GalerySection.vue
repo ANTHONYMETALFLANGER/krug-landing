@@ -1,27 +1,27 @@
 <script setup lang="ts">
 const images = [
   {
-    src: "gallery/small/5237888698702491981_121.jpg",
+    src: "gallery/small/IMG_20251005_185038195~2.jpg",
     alt: "gal1",
   },
   {
-    src: "gallery/small/Screenshot 2025-08-08 124858.jpg",
+    src: "gallery/small/IMG_20251005_185348411.jpg",
     alt: "gal2",
   },
   {
-    src: "gallery/small/5237888698702491983_121.jpg",
+    src: "gallery/small/IMG_20251005_185534227.jpg",
     alt: "gal3",
   },
   {
-    src: "gallery/small/5237888698702491992_121.jpg",
+    src: "gallery/small/IMG_20250818_235451000.jpg",
     alt: "gal4",
   },
   {
-    src: "gallery/small/sjnmxoklas.jpg",
+    src: "gallery/small/S1000042.jpg",
     alt: "gal5",
   },
   {
-    src: "gallery/small/IMG_20250808_134444243.jpg",
+    src: "gallery/small/IMG_20251005_220303502.jpg",
     alt: "gal6",
   },
 ]

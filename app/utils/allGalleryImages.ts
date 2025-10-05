@@ -7,124 +7,139 @@ export function getAllGalleryImages() {
   }
   return [
     {
-      ...largeSmallWithSameName("5237888698702491981_121.jpg"),
+      ...largeSmallWithSameName("IMG_20251005_185038195~2.jpg"),
       alt: "gal1",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
+      description: "Прототип для исследования эргономики и сборки электронной части (вид 1)",
     },
     {
-      ...largeSmallWithSameName("5237888698702491982_121.jpg"),
+      ...largeSmallWithSameName("IMG_20251005_185220116~2.jpg"),
       alt: "gal2",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
+      description: "Прототип для исследования эргономики и сборки электронной части (вид 2)",
     },
     {
-      ...largeSmallWithSameName("5237888698702491983_121.jpg"),
+      ...largeSmallWithSameName("IMG_20251005_185348411.jpg"),
       alt: "gal3",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
+      description: "Прототип для исследования эргономики и сборки электронной части (вид 3)",
     },
     {
-      ...largeSmallWithSameName("5237888698702491990_121.jpg"),
+      ...largeSmallWithSameName("IMG_20251005_185511059~2.jpg"),
       alt: "gal4",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
+      description: "Прототип для исследования эргономики и сборки электронной части (вид 4)",
     },
     {
-      ...largeSmallWithSameName("5237888698702491992_121.jpg"),
+      ...largeSmallWithSameName("IMG_20251005_185534227.jpg"),
       alt: "gal5",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
+      description: "Прототип для исследования эргономики и сборки электронной части (вид 5)",
     },
     {
-      ...largeSmallWithSameName("IMG_20250808_125724062.jpg"),
+      ...largeSmallWithSameName("S1000042.jpg"),
       alt: "gal6",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
-    },
-    {
-      ...largeSmallWithSameName("IMG_20250808_125751510.jpg"),
-      alt: "gal7",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
-    },
-    {
-      ...largeSmallWithSameName("IMG_20250808_125804857.jpg"),
-      alt: "gal8",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
-    },
-    {
-      ...largeSmallWithSameName("IMG_20250808_130032449.jpg"),
-      alt: "gal9",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
-    },
-    {
-      ...largeSmallWithSameName("IMG_20250808_132705408.jpg"),
-      alt: "gal10",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
-    },
-    {
-      ...largeSmallWithSameName("IMG_20250808_134444243.jpg"),
-      alt: "gal11",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
+      description: "Прототип пассивного хамбакера. Оптимизирован под печать и легкую сборку. Вся коммутация выполнена на печатной плате",
     },
     {
       ...largeSmallWithSameName("IMG_20250818_235451000.jpg"),
+      alt: "gal7",
+      description: "Печатаем деку",
+    },
+    {
+      ...largeSmallWithSameName("IMG_20251005_220303502.jpg"),
+      alt: "gal8",
+      description: "Прототипы активных хамбакеров (близких по конструкции к EMG) на быстросьемном креплении",
+    },
+    {
+      ...largeSmallWithSameName("IMG_20251005_220543073.jpg"),
+      alt: "gal9",
+      description: "Печатные платы для коммутации звукоснимателей и быстросьемного крепления",
+    },
+    {
+      ...largeSmallWithSameName("5237888698702491981_121.jpg"),
+      alt: "gal10",
+      description: "Сборка деки модели А из напечатанных компонентов",
+    },
+    {
+      ...largeSmallWithSameName("5237888698702491982_121.jpg"),
+      alt: "gal11",
+      description: "Печатные платы для коммутации звукоснимателей и быстросьемного крепления (2)",
+    },
+    {
+      ...largeSmallWithSameName("5237888698702491983_121.jpg"),
       alt: "gal12",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
+      description: "Макеты звукоснимателей на быстросьемном магнитном креплении",
     },
     {
-      ...largeSmallWithSameName("Screenshot 2025-08-08 124602.jpg"),
+      ...largeSmallWithSameName("5237888698702491990_121.jpg"),
       alt: "gal13",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
+      description: "Процесс идет...",
     },
     {
-      ...largeSmallWithSameName("Screenshot 2025-08-08 124858.jpg"),
+      ...largeSmallWithSameName("IMG_20250808_132705408.jpg"),
       alt: "gal14",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
-    },
-    {
-      ...largeSmallWithSameName("Screenshot 2025-08-08 124801.jpg"),
-      alt: "gal15",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
-    },
-    {
-      ...largeSmallWithSameName("Screenshot 2025-08-08 124858.jpg"),
-      alt: "gal16",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
-    },
-    {
-      ...largeSmallWithSameName("Screenshot 2025-08-08 125335.jpg"),
-      alt: "gal17",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
-    },
-    {
-      ...largeSmallWithSameName("Screenshot 2025-08-08 125346.jpg"),
-      alt: "gal18",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
-    },
-    {
-      ...largeSmallWithSameName("Screenshot 2025-08-08 133335.jpg"),
-      alt: "gal19",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
-    },
-    {
-      ...largeSmallWithSameName("Screenshot 2025-08-08 134111.jpg"),
-      alt: "gal20",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
-    },
-    {
-      ...largeSmallWithSameName("Screenshot 2025-08-08 134225.jpg"),
-      alt: "gal21",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
-    },
-    {
-      ...largeSmallWithSameName("Screenshot 2025-08-08 135854.jpg"),
-      alt: "gal22",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
-    },
-    {
-      ...largeSmallWithSameName("Screenshot 2025-08-08 140042.jpg"),
-      alt: "gal23",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
+      description: "Печатные платы для коммутации звукоснимателей и быстросьемного крепления (3)",
     },
     {
       ...largeSmallWithSameName("sjnmxoklas.jpg"),
       alt: "gal24",
-      description: "Проект пользуется всесторонней поддержкой РГЭУ (РИНХ).",
+      description: "Пробная постобработка (шлифовка, шпатлевка, грунтовка, покраска) деки",
+    },
+    {
+      ...largeSmallWithSameName("IMG_20251005_215443406~2.jpg"),
+      alt: "gal15",
+      description: "Механика намоточного станка собрана",
+    },
+    {
+      ...largeSmallWithSameName("Screenshot 2025-08-08 124602.jpg"),
+      alt: "gal16",
+      description: "Разработка модели А (1)",
+    },
+    {
+      ...largeSmallWithSameName("Screenshot 2025-08-08 124858.jpg"),
+      alt: "gal17",
+      description: "Разработка модели А (2)",
+    },
+    {
+      ...largeSmallWithSameName("Screenshot 2025-08-08 124801.jpg"),
+      alt: "gal18",
+      description: "Разработка модели А (3)",
+    },
+    {
+      ...largeSmallWithSameName("Screenshot 2025-08-08 124858.jpg"),
+      alt: "gal19",
+      description: "Разработка модели А (4)",
+    },
+    {
+      ...largeSmallWithSameName("Screenshot 2025-08-08 125335.jpg"),
+      alt: "gal20",
+      description: "Разработка намотчика (1)",
+    },
+    {
+      ...largeSmallWithSameName("Screenshot 2025-08-08 125346.jpg"),
+      alt: "gal21",
+      description: "Разработка намотчика (2)",
+    },
+    {
+      ...largeSmallWithSameName("Screenshot 2025-08-08 134111.jpg"),
+      alt: "gal22",
+      description: "Разработка звукоснимателей в процессе (1)",
+    },
+    {
+      ...largeSmallWithSameName("Screenshot 2025-08-08 134225.jpg"),
+      alt: "gal23",
+      description: "Разработка звукоснимателей в процессе (2)",
+    },
+    {
+      ...largeSmallWithSameName("Screenshot 2025-08-08 133335.jpg"),
+      alt: "gal24",
+      description: "Подготовка деки модели А к печати (1)",
+    },
+    {
+      ...largeSmallWithSameName("Screenshot 2025-08-08 135854.jpg"),
+      alt: "gal25",
+      description: "Подготовка деки модели А к печати (2)",
+    },
+    {
+      ...largeSmallWithSameName("Screenshot 2025-08-08 140042.jpg"),
+      alt: "gal26",
+      description: "Подготовка грифа модели А к печати (3)",
     },
   ]
 }

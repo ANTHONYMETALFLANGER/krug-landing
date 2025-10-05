@@ -63,7 +63,7 @@
     }
 
     .cover-noise-darker::after {
-        @apply brightness-[705%] opacity-[0.35] mix-blend-multiply;
+        @apply brightness-[705%] opacity-[0.25] mix-blend-multiply;
     }
 
     .cover-noise-semi-darker::after {
@@ -71,11 +71,11 @@
     }
 
     .cover-noise-semi-lighter::after {
-        @apply brightness-[505%] opacity-[0.3] mix-blend-hard-light;
+        @apply brightness-[505%] opacity-[0.2] mix-blend-hard-light;
     }
 
     .cover-noise-semi-semi-lighter::after {
-        @apply brightness-[705%] opacity-[0.15] mix-blend-hard-light;
+        @apply brightness-[705%] opacity-[0.1] mix-blend-hard-light;
     }
 
     .cover-noise-lighter::after {

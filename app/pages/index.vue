@@ -9,7 +9,7 @@ definePageMeta({
     <Hero />
     <ModelAFeatures />
     <GuitarColorSection />
-    <BlogSection />
+    <BlogSection v-if="false" />
     <GalerySection />
     <ProjectStatusAndFeedback />
     <ProjectSupport />
